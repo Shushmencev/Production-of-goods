@@ -41,6 +41,10 @@
             this.файлToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.справочникToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.производителиToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.товарыToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ресурсыToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMain.SuspendLayout();
             this.contextMenuStripMain.SuspendLayout();
             this.SuspendLayout();
@@ -120,9 +124,10 @@
             // contextMenuStripMain
             // 
             this.contextMenuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.файлToolStripMenuItem1});
+            this.файлToolStripMenuItem1,
+            this.справочникToolStripMenuItem});
             this.contextMenuStripMain.Name = "contextMenuStripMain";
-            this.contextMenuStripMain.Size = new System.Drawing.Size(104, 26);
+            this.contextMenuStripMain.Size = new System.Drawing.Size(143, 48);
             // 
             // файлToolStripMenuItem1
             // 
@@ -150,6 +155,40 @@
             this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.информацияToolStripMenuItem_Click);
+            // 
+            // справочникToolStripMenuItem
+            // 
+            this.справочникToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.производителиToolStripMenuItem1,
+            this.товарыToolStripMenuItem1,
+            this.ресурсыToolStripMenuItem1});
+            this.справочникToolStripMenuItem.Name = "справочникToolStripMenuItem";
+            this.справочникToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.справочникToolStripMenuItem.Text = "Справочник";
+            // 
+            // производителиToolStripMenuItem1
+            // 
+            this.производителиToolStripMenuItem1.Image = global::Production_of_goods.Properties.Resources.Производители;
+            this.производителиToolStripMenuItem1.Name = "производителиToolStripMenuItem1";
+            this.производителиToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.M)));
+            this.производителиToolStripMenuItem1.Size = new System.Drawing.Size(201, 22);
+            this.производителиToolStripMenuItem1.Text = "Производители";
+            // 
+            // товарыToolStripMenuItem1
+            // 
+            this.товарыToolStripMenuItem1.Image = global::Production_of_goods.Properties.Resources.Товары;
+            this.товарыToolStripMenuItem1.Name = "товарыToolStripMenuItem1";
+            this.товарыToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.G)));
+            this.товарыToolStripMenuItem1.Size = new System.Drawing.Size(201, 22);
+            this.товарыToolStripMenuItem1.Text = "Товары";
+            // 
+            // ресурсыToolStripMenuItem1
+            // 
+            this.ресурсыToolStripMenuItem1.Image = global::Production_of_goods.Properties.Resources.Ресурсы;
+            this.ресурсыToolStripMenuItem1.Name = "ресурсыToolStripMenuItem1";
+            this.ресурсыToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.R)));
+            this.ресурсыToolStripMenuItem1.Size = new System.Drawing.Size(201, 22);
+            this.ресурсыToolStripMenuItem1.Text = "Ресурсы";
             // 
             // FormMain
             // 
@@ -184,6 +223,10 @@
         private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem справочникToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem производителиToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem товарыToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem ресурсыToolStripMenuItem1;
     }
 }
 
