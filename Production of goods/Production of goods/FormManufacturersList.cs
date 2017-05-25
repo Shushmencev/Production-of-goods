@@ -16,5 +16,20 @@ namespace Production_of_goods
         {
             InitializeComponent();
         }
+
+        private void manufacturerBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.manufacturerBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.production_of_goodsDataSet);
+
+        }
+
+        private void FormManufacturersList_Load(object sender, EventArgs e)
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "production_of_goodsDataSet.manufacturer". При необходимости она может быть перемещена или удалена.
+            this.manufacturerTableAdapter.Fill(this.production_of_goodsDataSet.manufacturer);
+
+        }
     }
 }

@@ -57,6 +57,11 @@
     <Compile Include="FormManufacturersList.Designer.cs">
       <DependentUpon>FormManufacturersList.cs</DependentUpon>
     </Compile>
+    <Compile Include="production_of_goodsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>production_of_goodsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormMain.resx">
@@ -75,6 +80,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="production_of_goodsDataSet.xsc">
+      <DependentUpon>production_of_goodsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="production_of_goodsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>production_of_goodsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="production_of_goodsDataSet.xss">
+      <DependentUpon>production_of_goodsDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

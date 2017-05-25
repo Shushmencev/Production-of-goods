@@ -34,5 +34,11 @@ namespace Production_of_goods
             MessageBox.Show("(С) ТУСУР, ФБ, Шушменцев Антон Васильевич, группа 735, 2017",
                 "О программе", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void производителиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormManufacturersList fm = new FormManufacturersList();
+            fm.Show();
+        }
     }
 }

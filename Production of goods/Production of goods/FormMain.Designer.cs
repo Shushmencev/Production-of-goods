@@ -113,6 +113,7 @@
             this.производителиToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.M)));
             this.производителиToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.производителиToolStripMenuItem.Text = "Производители";
+            this.производителиToolStripMenuItem.Click += new System.EventHandler(this.производителиToolStripMenuItem_Click);
             // 
             // товарыToolStripMenuItem
             // 
