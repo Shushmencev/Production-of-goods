@@ -10,5 +10,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=АНТОН-ПК\SQLEXPRESS;Initial Catalog=production_of_goods;Integrated Security=True</Value>
     </Setting>
+    <Setting Name="FormPos" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">100, 100</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

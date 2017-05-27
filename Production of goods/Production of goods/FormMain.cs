@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Production_of_goods.Properties;
 
 namespace Production_of_goods
 {
@@ -37,8 +38,17 @@ namespace Production_of_goods
 
         private void производителиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormManufacturersList fm = new FormManufacturersList();
-            fm.Show();
+            FormManufacturersList.fm.Show();
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Settings.Default.Save();
         }
     }
 }

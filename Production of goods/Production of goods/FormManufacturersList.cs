@@ -10,8 +10,19 @@ using System.Windows.Forms;
 
 namespace Production_of_goods
 {
+    
     public partial class FormManufacturersList : Form
     {
+        private static FormManufacturersList f;
+        public static FormManufacturersList fm
+        {
+            get
+            {
+                if (f == null || f.IsDisposed) f = new FormManufacturersList();
+                return f;
+            }
+        }
+
         public FormManufacturersList()
         {
             InitializeComponent();
