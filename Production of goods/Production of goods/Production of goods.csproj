@@ -57,6 +57,9 @@
     <Compile Include="FormManufacturersList.Designer.cs">
       <DependentUpon>FormManufacturersList.cs</DependentUpon>
     </Compile>
+    <Compile Include="production_of_goodsDataSet.cs">
+      <DependentUpon>production_of_goodsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="production_of_goodsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

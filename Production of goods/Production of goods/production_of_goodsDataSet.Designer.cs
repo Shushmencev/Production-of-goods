@@ -693,10 +693,10 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public customerRow AddcustomerRow(int id_customer, string organization_name, string e_mail, string phone_number, string address) {
+            public customerRow AddcustomerRow(string organization_name, string e_mail, string phone_number, string address) {
                 customerRow rowcustomerRow = ((customerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        id_customer,
+                        null,
                         organization_name,
                         e_mail,
                         phone_number,
@@ -752,6 +752,8 @@ namespace Production_of_goods {
                 base.Columns.Add(this.columnaddress);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_customer}, true));
+                this.columnid_customer.AutoIncrement = true;
+                this.columnid_customer.AutoIncrementSeed = 1;
                 this.columnid_customer.AllowDBNull = false;
                 this.columnid_customer.Unique = true;
                 this.columnorganization_name.AllowDBNull = false;
@@ -985,10 +987,10 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public goodsRow AddgoodsRow(int id_goods, string goods_name) {
+            public goodsRow AddgoodsRow(string goods_name) {
                 goodsRow rowgoodsRow = ((goodsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        id_goods,
+                        null,
                         goods_name};
                 rowgoodsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowgoodsRow);
@@ -1032,6 +1034,8 @@ namespace Production_of_goods {
                 base.Columns.Add(this.columngoods_name);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_goods}, true));
+                this.columnid_goods.AutoIncrement = true;
+                this.columnid_goods.AutoIncrementSeed = 1;
                 this.columnid_goods.AllowDBNull = false;
                 this.columnid_goods.Unique = true;
                 this.columngoods_name.AllowDBNull = false;
@@ -1834,10 +1838,10 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public manufacturerRow AddmanufacturerRow(int id_manufacturer, string organization_name, string e_mail, string phone_number, string address) {
+            public manufacturerRow AddmanufacturerRow(string organization_name, string e_mail, string phone_number, string address) {
                 manufacturerRow rowmanufacturerRow = ((manufacturerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        id_manufacturer,
+                        null,
                         organization_name,
                         e_mail,
                         phone_number,
@@ -1893,6 +1897,8 @@ namespace Production_of_goods {
                 base.Columns.Add(this.columnaddress);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_manufacturer}, true));
+                this.columnid_manufacturer.AutoIncrement = true;
+                this.columnid_manufacturer.AutoIncrementSeed = 1;
                 this.columnid_manufacturer.AllowDBNull = false;
                 this.columnid_manufacturer.Unique = true;
                 this.columnorganization_name.AllowDBNull = false;
@@ -2146,10 +2152,10 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public orderRow AddorderRow(int id_order, customerRow parentcustomerRowByFK_order_customer, goodsRow parentgoodsRowByFK_order_goods, System.DateTime data_time) {
+            public orderRow AddorderRow(customerRow parentcustomerRowByFK_order_customer, goodsRow parentgoodsRowByFK_order_goods, System.DateTime data_time) {
                 orderRow roworderRow = ((orderRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        id_order,
+                        null,
                         null,
                         null,
                         data_time};
@@ -2207,6 +2213,8 @@ namespace Production_of_goods {
                 base.Columns.Add(this.columndata_time);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_order}, true));
+                this.columnid_order.AutoIncrement = true;
+                this.columnid_order.AutoIncrementSeed = 1;
                 this.columnid_order.AllowDBNull = false;
                 this.columnid_order.Unique = true;
                 this.columnid_customer.AllowDBNull = false;
@@ -2465,17 +2473,14 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public resourceRow AddresourceRow(int id_resourse, stockRow parentstockRowByFK_resource_stock, double volume, decimal price, string resource_name) {
+            public resourceRow AddresourceRow(double volume, decimal price, string resource_name) {
                 resourceRow rowresourceRow = ((resourceRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        id_resourse,
+                        null,
                         null,
                         volume,
                         price,
                         resource_name};
-                if ((parentstockRowByFK_resource_stock != null)) {
-                    columnValuesArray[1] = parentstockRowByFK_resource_stock[0];
-                }
                 rowresourceRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowresourceRow);
                 return rowresourceRow;
@@ -2527,8 +2532,12 @@ namespace Production_of_goods {
                 base.Columns.Add(this.columnresource_name);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_resourse}, true));
+                this.columnid_resourse.AutoIncrement = true;
+                this.columnid_resourse.AutoIncrementSeed = 1;
                 this.columnid_resourse.AllowDBNull = false;
                 this.columnid_resourse.Unique = true;
+                this.columnid_stock.AutoIncrement = true;
+                this.columnid_stock.AutoIncrementSeed = 1;
                 this.columnid_stock.AllowDBNull = false;
                 this.columnvolume.AllowDBNull = false;
                 this.columnprice.AllowDBNull = false;
@@ -2757,10 +2766,10 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public stockRow AddstockRow(int id_stock, string adress) {
+            public stockRow AddstockRow(string adress) {
                 stockRow rowstockRow = ((stockRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        id_stock,
+                        null,
                         adress};
                 rowstockRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowstockRow);
@@ -2804,6 +2813,8 @@ namespace Production_of_goods {
                 base.Columns.Add(this.columnadress);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_stock}, true));
+                this.columnid_stock.AutoIncrement = true;
+                this.columnid_stock.AutoIncrementSeed = 1;
                 this.columnid_stock.AllowDBNull = false;
                 this.columnid_stock.Unique = true;
                 this.columnadress.AllowDBNull = false;
@@ -6003,8 +6014,13 @@ SELECT id_resourse, id_stock, volume, price, resource_name FROM resource WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_resourse, int Original_id_stock, double Original_volume, decimal Original_price, string Original_resource_name) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_resourse));
+        public virtual int Delete(global::System.Nullable<int> Original_id_resourse, int Original_id_stock, double Original_volume, decimal Original_price, string Original_resource_name) {
+            if ((Original_id_resourse.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_resourse.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_id_stock));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_volume));
             this.Adapter.DeleteCommand.Parameters[3].Value = ((decimal)(Original_price));
@@ -6034,8 +6050,13 @@ SELECT id_resourse, id_stock, volume, price, resource_name FROM resource WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int id_resourse, int id_stock, double volume, decimal price, string resource_name) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id_resourse));
+        public virtual int Insert(global::System.Nullable<int> id_resourse, int id_stock, double volume, decimal price, string resource_name) {
+            if ((id_resourse.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id_resourse.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(id_stock));
             this.Adapter.InsertCommand.Parameters[2].Value = ((double)(volume));
             this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(price));
@@ -6065,8 +6086,13 @@ SELECT id_resourse, id_stock, volume, price, resource_name FROM resource WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int id_resourse, int id_stock, double volume, decimal price, string resource_name, int Original_id_resourse, int Original_id_stock, double Original_volume, decimal Original_price, string Original_resource_name) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id_resourse));
+        public virtual int Update(global::System.Nullable<int> id_resourse, int id_stock, double volume, decimal price, string resource_name, global::System.Nullable<int> Original_id_resourse, int Original_id_stock, double Original_volume, decimal Original_price, string Original_resource_name) {
+            if ((id_resourse.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id_resourse.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(id_stock));
             this.Adapter.UpdateCommand.Parameters[2].Value = ((double)(volume));
             this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(price));
@@ -6076,7 +6102,12 @@ SELECT id_resourse, id_stock, volume, price, resource_name FROM resource WHERE (
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(resource_name));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_id_resourse));
+            if ((Original_id_resourse.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_id_resourse.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
             this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_id_stock));
             this.Adapter.UpdateCommand.Parameters[7].Value = ((double)(Original_volume));
             this.Adapter.UpdateCommand.Parameters[8].Value = ((decimal)(Original_price));
@@ -6106,7 +6137,7 @@ SELECT id_resourse, id_stock, volume, price, resource_name FROM resource WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int id_stock, double volume, decimal price, string resource_name, int Original_id_resourse, int Original_id_stock, double Original_volume, decimal Original_price, string Original_resource_name) {
+        public virtual int Update(int id_stock, double volume, decimal price, string resource_name, global::System.Nullable<int> Original_id_resourse, int Original_id_stock, double Original_volume, decimal Original_price, string Original_resource_name) {
             return this.Update(Original_id_resourse, id_stock, volume, price, resource_name, Original_id_resourse, Original_id_stock, Original_volume, Original_price, Original_resource_name);
         }
     }
