@@ -187,5 +187,35 @@ namespace Production_of_goods
         {
 
         }
+
+        private void toolStripButton61_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton54_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton40_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox5_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
