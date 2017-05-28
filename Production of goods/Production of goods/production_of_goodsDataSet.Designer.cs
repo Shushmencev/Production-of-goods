@@ -2473,7 +2473,7 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public resourceRow AddresourceRow(double volume, decimal price, string resource_name) {
+            public resourceRow AddresourceRow(stockRow parentstockRowByFK_resource_stock, double volume, decimal price, string resource_name) {
                 resourceRow rowresourceRow = ((resourceRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2481,6 +2481,9 @@ namespace Production_of_goods {
                         volume,
                         price,
                         resource_name};
+                if ((parentstockRowByFK_resource_stock != null)) {
+                    columnValuesArray[1] = parentstockRowByFK_resource_stock[0];
+                }
                 rowresourceRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowresourceRow);
                 return rowresourceRow;
@@ -2536,7 +2539,6 @@ namespace Production_of_goods {
                 this.columnid_resourse.AutoIncrementSeed = 1;
                 this.columnid_resourse.AllowDBNull = false;
                 this.columnid_resourse.Unique = true;
-                this.columnid_stock.AutoIncrement = true;
                 this.columnid_stock.AutoIncrementSeed = 1;
                 this.columnid_stock.AllowDBNull = false;
                 this.columnvolume.AllowDBNull = false;

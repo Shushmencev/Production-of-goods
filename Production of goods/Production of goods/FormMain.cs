@@ -43,6 +43,18 @@ namespace Production_of_goods
 
         private void FormMain_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "production_of_goodsDataSet.customer". При необходимости она может быть перемещена или удалена.
+            this.customerTableAdapter.Fill(this.production_of_goodsDataSet.customer);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "production_of_goodsDataSet.order". При необходимости она может быть перемещена или удалена.
+            this.orderTableAdapter.Fill(this.production_of_goodsDataSet.order);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "production_of_goodsDataSet.stock". При необходимости она может быть перемещена или удалена.
+            this.stockTableAdapter.Fill(this.production_of_goodsDataSet.stock);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "production_of_goodsDataSet.resource". При необходимости она может быть перемещена или удалена.
+            this.resourceTableAdapter.Fill(this.production_of_goodsDataSet.resource);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "production_of_goodsDataSet.goods". При необходимости она может быть перемещена или удалена.
+            this.goodsTableAdapter.Fill(this.production_of_goodsDataSet.goods);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "production_of_goodsDataSet.manufacturer". При необходимости она может быть перемещена или удалена.
+            this.manufacturerTableAdapter.Fill(this.production_of_goodsDataSet.manufacturer);
 
         }
 
@@ -59,6 +71,16 @@ namespace Production_of_goods
         private void ресурсыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormResourceTable.fr.ShowForm();
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
