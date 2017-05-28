@@ -116,12 +116,24 @@ namespace Production_of_goods
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+        
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.manufacturerBindingSource.EndEdit();
+            this.manufacturerTableAdapter.Update(this.production_of_goodsDataSet.manufacturer);
+        }
 
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.goodsBindingSource.EndEdit();
+            this.goodsTableAdapter.Update(this.production_of_goodsDataSet.goods);
         }
     }
 }

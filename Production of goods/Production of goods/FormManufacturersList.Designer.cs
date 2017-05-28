@@ -142,7 +142,7 @@
             this.manufacturerBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.manufacturerBindingNavigator.Name = "manufacturerBindingNavigator";
             this.manufacturerBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.manufacturerBindingNavigator.Size = new System.Drawing.Size(287, 25);
+            this.manufacturerBindingNavigator.Size = new System.Drawing.Size(340, 25);
             this.manufacturerBindingNavigator.TabIndex = 0;
             this.manufacturerBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -323,7 +323,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(287, 174);
+            this.ClientSize = new System.Drawing.Size(340, 174);
             this.Controls.Add(id_manufacturerLabel);
             this.Controls.Add(this.id_manufacturerTextBox);
             this.Controls.Add(organization_nameLabel);
