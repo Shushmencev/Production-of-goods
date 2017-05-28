@@ -901,6 +901,8 @@ namespace Production_of_goods {
             
             private global::System.Data.DataColumn columngoods_name;
             
+            private global::System.Data.DataColumn columncategory;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public goodsDataTable() {
@@ -952,6 +954,14 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn categoryColumn {
+                get {
+                    return this.columncategory;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -987,11 +997,12 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public goodsRow AddgoodsRow(string goods_name) {
+            public goodsRow AddgoodsRow(string goods_name, string category) {
                 goodsRow rowgoodsRow = ((goodsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        goods_name};
+                        goods_name,
+                        category};
                 rowgoodsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowgoodsRow);
                 return rowgoodsRow;
@@ -1023,6 +1034,7 @@ namespace Production_of_goods {
             internal void InitVars() {
                 this.columnid_goods = base.Columns["id_goods"];
                 this.columngoods_name = base.Columns["goods_name"];
+                this.columncategory = base.Columns["category"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1032,6 +1044,8 @@ namespace Production_of_goods {
                 base.Columns.Add(this.columnid_goods);
                 this.columngoods_name = new global::System.Data.DataColumn("goods_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columngoods_name);
+                this.columncategory = new global::System.Data.DataColumn("category", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncategory);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_goods}, true));
                 this.columnid_goods.AutoIncrement = true;
@@ -3062,6 +3076,34 @@ namespace Production_of_goods {
                 set {
                     this[this.tablegoods.goods_nameColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string category {
+                get {
+                    try {
+                        return ((string)(this[this.tablegoods.categoryColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'category\' в таблице \'goods\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablegoods.categoryColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IscategoryNull() {
+                return this.IsNull(this.tablegoods.categoryColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetcategoryNull() {
+                this[this.tablegoods.categoryColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

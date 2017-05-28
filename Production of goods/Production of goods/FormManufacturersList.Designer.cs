@@ -36,30 +36,30 @@
             System.Windows.Forms.Label addressLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormManufacturersList));
             this.manufacturerBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.manufacturerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.production_of_goodsDataSet = new Production_of_goods.production_of_goodsDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.manufacturerBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.id_manufacturerTextBox = new System.Windows.Forms.TextBox();
             this.organization_nameTextBox = new System.Windows.Forms.TextBox();
             this.e_mailTextBox = new System.Windows.Forms.TextBox();
             this.phone_numberTextBox = new System.Windows.Forms.TextBox();
             this.addressTextBox = new System.Windows.Forms.TextBox();
-            this.manufacturerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.production_of_goodsDataSet = new Production_of_goods.production_of_goodsDataSet();
             this.manufacturerTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.manufacturerTableAdapter();
             this.tableAdapterManager = new Production_of_goods.production_of_goodsDataSetTableAdapters.TableAdapterManager();
             this.customerTableAdapter1 = new Production_of_goods.production_of_goodsDataSetTableAdapters.customerTableAdapter();
             this.goods_manufacturerTableAdapter1 = new Production_of_goods.production_of_goodsDataSetTableAdapters.goods_manufacturerTableAdapter();
             this.manufacturerTableAdapter1 = new Production_of_goods.production_of_goodsDataSetTableAdapters.manufacturerTableAdapter();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.manufacturerBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             id_manufacturerLabel = new System.Windows.Forms.Label();
             organization_nameLabel = new System.Windows.Forms.Label();
             e_mailLabel = new System.Windows.Forms.Label();
@@ -142,9 +142,28 @@
             this.manufacturerBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.manufacturerBindingNavigator.Name = "manufacturerBindingNavigator";
             this.manufacturerBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.manufacturerBindingNavigator.Size = new System.Drawing.Size(293, 25);
+            this.manufacturerBindingNavigator.Size = new System.Drawing.Size(287, 25);
             this.manufacturerBindingNavigator.TabIndex = 0;
             this.manufacturerBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // manufacturerBindingSource
+            // 
+            this.manufacturerBindingSource.DataMember = "manufacturer";
+            this.manufacturerBindingSource.DataSource = this.production_of_goodsDataSet;
+            // 
+            // production_of_goodsDataSet
+            // 
+            this.production_of_goodsDataSet.DataSetName = "production_of_goodsDataSet";
+            this.production_of_goodsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -152,6 +171,33 @@
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
             this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator
             // 
@@ -172,17 +218,44 @@
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
+            // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // manufacturerBindingNavigatorSaveItem
+            // 
+            this.manufacturerBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.manufacturerBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("manufacturerBindingNavigatorSaveItem.Image")));
+            this.manufacturerBindingNavigatorSaveItem.Name = "manufacturerBindingNavigatorSaveItem";
+            this.manufacturerBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.manufacturerBindingNavigatorSaveItem.Text = "Сохранить данные";
+            this.manufacturerBindingNavigatorSaveItem.Click += new System.EventHandler(this.manufacturerBindingNavigatorSaveItem_Click);
             // 
             // id_manufacturerTextBox
             // 
             this.id_manufacturerTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.manufacturerBindingSource, "id_manufacturer", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N0"));
             this.id_manufacturerTextBox.Location = new System.Drawing.Point(114, 38);
             this.id_manufacturerTextBox.Name = "id_manufacturerTextBox";
-            this.id_manufacturerTextBox.Size = new System.Drawing.Size(100, 20);
+            this.id_manufacturerTextBox.Size = new System.Drawing.Size(161, 20);
             this.id_manufacturerTextBox.TabIndex = 2;
             // 
             // organization_nameTextBox
@@ -190,7 +263,7 @@
             this.organization_nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.manufacturerBindingSource, "organization_name", true));
             this.organization_nameTextBox.Location = new System.Drawing.Point(114, 64);
             this.organization_nameTextBox.Name = "organization_nameTextBox";
-            this.organization_nameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.organization_nameTextBox.Size = new System.Drawing.Size(161, 20);
             this.organization_nameTextBox.TabIndex = 4;
             // 
             // e_mailTextBox
@@ -198,7 +271,7 @@
             this.e_mailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.manufacturerBindingSource, "e_mail", true));
             this.e_mailTextBox.Location = new System.Drawing.Point(114, 90);
             this.e_mailTextBox.Name = "e_mailTextBox";
-            this.e_mailTextBox.Size = new System.Drawing.Size(100, 20);
+            this.e_mailTextBox.Size = new System.Drawing.Size(161, 20);
             this.e_mailTextBox.TabIndex = 6;
             // 
             // phone_numberTextBox
@@ -206,7 +279,7 @@
             this.phone_numberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.manufacturerBindingSource, "phone_number", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N0"));
             this.phone_numberTextBox.Location = new System.Drawing.Point(114, 116);
             this.phone_numberTextBox.Name = "phone_numberTextBox";
-            this.phone_numberTextBox.Size = new System.Drawing.Size(100, 20);
+            this.phone_numberTextBox.Size = new System.Drawing.Size(161, 20);
             this.phone_numberTextBox.TabIndex = 8;
             // 
             // addressTextBox
@@ -214,18 +287,8 @@
             this.addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.manufacturerBindingSource, "address", true));
             this.addressTextBox.Location = new System.Drawing.Point(114, 142);
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(100, 20);
+            this.addressTextBox.Size = new System.Drawing.Size(161, 20);
             this.addressTextBox.TabIndex = 10;
-            // 
-            // manufacturerBindingSource
-            // 
-            this.manufacturerBindingSource.DataMember = "manufacturer";
-            this.manufacturerBindingSource.DataSource = this.production_of_goodsDataSet;
-            // 
-            // production_of_goodsDataSet
-            // 
-            this.production_of_goodsDataSet.DataSetName = "production_of_goodsDataSet";
-            this.production_of_goodsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // manufacturerTableAdapter
             // 
@@ -256,74 +319,11 @@
             // 
             this.manufacturerTableAdapter1.ClearBeforeFill = true;
             // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
-            // 
-            // manufacturerBindingNavigatorSaveItem
-            // 
-            this.manufacturerBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.manufacturerBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("manufacturerBindingNavigatorSaveItem.Image")));
-            this.manufacturerBindingNavigatorSaveItem.Name = "manufacturerBindingNavigatorSaveItem";
-            this.manufacturerBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.manufacturerBindingNavigatorSaveItem.Text = "Сохранить данные";
-            this.manufacturerBindingNavigatorSaveItem.Click += new System.EventHandler(this.manufacturerBindingNavigatorSaveItem_Click);
-            // 
             // FormManufacturersList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(293, 174);
+            this.ClientSize = new System.Drawing.Size(287, 174);
             this.Controls.Add(id_manufacturerLabel);
             this.Controls.Add(this.id_manufacturerTextBox);
             this.Controls.Add(organization_nameLabel);

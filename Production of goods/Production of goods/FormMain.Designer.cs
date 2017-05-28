@@ -54,78 +54,79 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.production_of_goodsDataSet = new Production_of_goods.production_of_goodsDataSet();
-            this.manufacturerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.manufacturerTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.manufacturerTableAdapter();
-            this.tableAdapterManager = new Production_of_goods.production_of_goodsDataSetTableAdapters.TableAdapterManager();
             this.manufacturerDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.goodsTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.goodsTableAdapter();
+            this.manufacturerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.production_of_goodsDataSet = new Production_of_goods.production_of_goodsDataSet();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.goodsDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.resourceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.resourceTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.resourceTableAdapter();
+            this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.resourceDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stockBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.stockTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.stockTableAdapter();
+            this.resourceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.stockDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.orderTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.orderTableAdapter();
+            this.stockBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.orderDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.customerTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.customerTableAdapter();
             this.customerDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.manufacturerTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.manufacturerTableAdapter();
+            this.tableAdapterManager = new Production_of_goods.production_of_goodsDataSetTableAdapters.TableAdapterManager();
+            this.customerTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.customerTableAdapter();
+            this.goodsTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.goodsTableAdapter();
+            this.orderTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.orderTableAdapter();
+            this.resourceTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.resourceTableAdapter();
+            this.stockTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.stockTableAdapter();
+            this.idgoodsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goodsnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStripMain.SuspendLayout();
             this.contextMenuStripMain.SuspendLayout();
             this.toolStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.production_of_goodsDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.manufacturerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.manufacturerDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manufacturerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.production_of_goodsDataSet)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.goodsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resourceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.resourceDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resourceBindingSource)).BeginInit();
+            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stockDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).BeginInit();
+            this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStripMain
@@ -367,75 +368,6 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.goodsDataGridView);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(802, 398);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Товары";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.resourceDataGridView);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(802, 398);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Ресурсы";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.stockDataGridView);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(802, 398);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Склады";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.orderDataGridView);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(802, 398);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Сделки";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // production_of_goodsDataSet
-            // 
-            this.production_of_goodsDataSet.DataSetName = "production_of_goodsDataSet";
-            this.production_of_goodsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // manufacturerBindingSource
-            // 
-            this.manufacturerBindingSource.DataMember = "manufacturer";
-            this.manufacturerBindingSource.DataSource = this.production_of_goodsDataSet;
-            // 
-            // manufacturerTableAdapter
-            // 
-            this.manufacturerTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.customerTableAdapter = this.customerTableAdapter;
-            this.tableAdapterManager.goods_manufacturerTableAdapter = null;
-            this.tableAdapterManager.goods_resourceTableAdapter = null;
-            this.tableAdapterManager.goodsTableAdapter = this.goodsTableAdapter;
-            this.tableAdapterManager.manufacturerTableAdapter = this.manufacturerTableAdapter;
-            this.tableAdapterManager.orderTableAdapter = this.orderTableAdapter;
-            this.tableAdapterManager.resourceTableAdapter = this.resourceTableAdapter;
-            this.tableAdapterManager.stockTableAdapter = this.stockTableAdapter;
-            this.tableAdapterManager.UpdateOrder = Production_of_goods.production_of_goodsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
             // manufacturerDataGridView
             // 
             this.manufacturerDataGridView.AutoGenerateColumns = false;
@@ -483,22 +415,36 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "address";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // goodsBindingSource
+            // manufacturerBindingSource
             // 
-            this.goodsBindingSource.DataMember = "goods";
-            this.goodsBindingSource.DataSource = this.production_of_goodsDataSet;
+            this.manufacturerBindingSource.DataMember = "manufacturer";
+            this.manufacturerBindingSource.DataSource = this.production_of_goodsDataSet;
             // 
-            // goodsTableAdapter
+            // production_of_goodsDataSet
             // 
-            this.goodsTableAdapter.ClearBeforeFill = true;
+            this.production_of_goodsDataSet.DataSetName = "production_of_goodsDataSet";
+            this.production_of_goodsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.goodsDataGridView);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(802, 398);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Товары";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // goodsDataGridView
             // 
             this.goodsDataGridView.AutoGenerateColumns = false;
             this.goodsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.goodsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7});
+            this.idgoodsDataGridViewTextBoxColumn,
+            this.goodsnameDataGridViewTextBoxColumn,
+            this.categoryDataGridViewTextBoxColumn});
             this.goodsDataGridView.DataSource = this.goodsBindingSource;
             this.goodsDataGridView.Dock = System.Windows.Forms.DockStyle.Left;
             this.goodsDataGridView.Location = new System.Drawing.Point(3, 3);
@@ -506,26 +452,20 @@
             this.goodsDataGridView.Size = new System.Drawing.Size(550, 392);
             this.goodsDataGridView.TabIndex = 0;
             // 
-            // dataGridViewTextBoxColumn6
+            // goodsBindingSource
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "id_goods";
-            this.dataGridViewTextBoxColumn6.HeaderText = "id_goods";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.goodsBindingSource.DataMember = "goods";
+            this.goodsBindingSource.DataSource = this.production_of_goodsDataSet;
             // 
-            // dataGridViewTextBoxColumn7
+            // tabPage3
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "goods_name";
-            this.dataGridViewTextBoxColumn7.HeaderText = "goods_name";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // resourceBindingSource
-            // 
-            this.resourceBindingSource.DataMember = "resource";
-            this.resourceBindingSource.DataSource = this.production_of_goodsDataSet;
-            // 
-            // resourceTableAdapter
-            // 
-            this.resourceTableAdapter.ClearBeforeFill = true;
+            this.tabPage3.Controls.Add(this.resourceDataGridView);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(802, 398);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Ресурсы";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // resourceDataGridView
             // 
@@ -574,14 +514,20 @@
             this.dataGridViewTextBoxColumn12.HeaderText = "resource_name";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             // 
-            // stockBindingSource
+            // resourceBindingSource
             // 
-            this.stockBindingSource.DataMember = "stock";
-            this.stockBindingSource.DataSource = this.production_of_goodsDataSet;
+            this.resourceBindingSource.DataMember = "resource";
+            this.resourceBindingSource.DataSource = this.production_of_goodsDataSet;
             // 
-            // stockTableAdapter
+            // tabPage4
             // 
-            this.stockTableAdapter.ClearBeforeFill = true;
+            this.tabPage4.Controls.Add(this.stockDataGridView);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(802, 398);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Склады";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // stockDataGridView
             // 
@@ -609,14 +555,20 @@
             this.dataGridViewTextBoxColumn14.HeaderText = "adress";
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             // 
-            // orderBindingSource
+            // stockBindingSource
             // 
-            this.orderBindingSource.DataMember = "order";
-            this.orderBindingSource.DataSource = this.production_of_goodsDataSet;
+            this.stockBindingSource.DataMember = "stock";
+            this.stockBindingSource.DataSource = this.production_of_goodsDataSet;
             // 
-            // orderTableAdapter
+            // tabPage5
             // 
-            this.orderTableAdapter.ClearBeforeFill = true;
+            this.tabPage5.Controls.Add(this.orderDataGridView);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(802, 398);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Сделки";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // orderDataGridView
             // 
@@ -658,6 +610,11 @@
             this.dataGridViewTextBoxColumn18.HeaderText = "data_time";
             this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
             // 
+            // orderBindingSource
+            // 
+            this.orderBindingSource.DataMember = "order";
+            this.orderBindingSource.DataSource = this.production_of_goodsDataSet;
+            // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.customerDataGridView);
@@ -668,15 +625,6 @@
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Заказчики";
             this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataMember = "customer";
-            this.customerBindingSource.DataSource = this.production_of_goodsDataSet;
-            // 
-            // customerTableAdapter
-            // 
-            this.customerTableAdapter.ClearBeforeFill = true;
             // 
             // customerDataGridView
             // 
@@ -725,6 +673,66 @@
             this.dataGridViewTextBoxColumn23.HeaderText = "address";
             this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
             // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "customer";
+            this.customerBindingSource.DataSource = this.production_of_goodsDataSet;
+            // 
+            // manufacturerTableAdapter
+            // 
+            this.manufacturerTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.customerTableAdapter = this.customerTableAdapter;
+            this.tableAdapterManager.goods_manufacturerTableAdapter = null;
+            this.tableAdapterManager.goods_resourceTableAdapter = null;
+            this.tableAdapterManager.goodsTableAdapter = this.goodsTableAdapter;
+            this.tableAdapterManager.manufacturerTableAdapter = this.manufacturerTableAdapter;
+            this.tableAdapterManager.orderTableAdapter = this.orderTableAdapter;
+            this.tableAdapterManager.resourceTableAdapter = this.resourceTableAdapter;
+            this.tableAdapterManager.stockTableAdapter = this.stockTableAdapter;
+            this.tableAdapterManager.UpdateOrder = Production_of_goods.production_of_goodsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
+            // 
+            // goodsTableAdapter
+            // 
+            this.goodsTableAdapter.ClearBeforeFill = true;
+            // 
+            // orderTableAdapter
+            // 
+            this.orderTableAdapter.ClearBeforeFill = true;
+            // 
+            // resourceTableAdapter
+            // 
+            this.resourceTableAdapter.ClearBeforeFill = true;
+            // 
+            // stockTableAdapter
+            // 
+            this.stockTableAdapter.ClearBeforeFill = true;
+            // 
+            // idgoodsDataGridViewTextBoxColumn
+            // 
+            this.idgoodsDataGridViewTextBoxColumn.DataPropertyName = "id_goods";
+            this.idgoodsDataGridViewTextBoxColumn.HeaderText = "id_goods";
+            this.idgoodsDataGridViewTextBoxColumn.Name = "idgoodsDataGridViewTextBoxColumn";
+            // 
+            // goodsnameDataGridViewTextBoxColumn
+            // 
+            this.goodsnameDataGridViewTextBoxColumn.DataPropertyName = "goods_name";
+            this.goodsnameDataGridViewTextBoxColumn.HeaderText = "goods_name";
+            this.goodsnameDataGridViewTextBoxColumn.Name = "goodsnameDataGridViewTextBoxColumn";
+            // 
+            // categoryDataGridViewTextBoxColumn
+            // 
+            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "category";
+            this.categoryDataGridViewTextBoxColumn.HeaderText = "category";
+            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -750,24 +758,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.tabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.production_of_goodsDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.manufacturerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.manufacturerDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manufacturerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.production_of_goodsDataSet)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.goodsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resourceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
+            this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.resourceDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resourceBindingSource)).EndInit();
+            this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.stockDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).EndInit();
+            this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.orderDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             this.tabPage6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -809,16 +817,9 @@
         private production_of_goodsDataSetTableAdapters.manufacturerTableAdapter manufacturerTableAdapter;
         private production_of_goodsDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView manufacturerDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private production_of_goodsDataSetTableAdapters.goodsTableAdapter goodsTableAdapter;
         private System.Windows.Forms.BindingSource goodsBindingSource;
         private System.Windows.Forms.DataGridView goodsDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private production_of_goodsDataSetTableAdapters.resourceTableAdapter resourceTableAdapter;
         private System.Windows.Forms.BindingSource resourceBindingSource;
         private System.Windows.Forms.DataGridView resourceDataGridView;
@@ -848,6 +849,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idgoodsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn goodsnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
     }
 }
 
