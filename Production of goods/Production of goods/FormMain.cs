@@ -135,5 +135,29 @@ namespace Production_of_goods
             this.goodsBindingSource.EndEdit();
             this.goodsTableAdapter.Update(this.production_of_goodsDataSet.goods);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.resourceBindingSource.EndEdit();
+            this.resourceTableAdapter.Update(this.production_of_goodsDataSet.resource);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.stockBindingSource.EndEdit();
+            this.stockTableAdapter.Update(this.production_of_goodsDataSet.stock);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.orderBindingSource.EndEdit();
+            this.orderTableAdapter.Update(this.production_of_goodsDataSet.order);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.customerBindingSource.EndEdit();
+            this.customerTableAdapter.Update(this.production_of_goodsDataSet.customer);
+        }
     }
 }
