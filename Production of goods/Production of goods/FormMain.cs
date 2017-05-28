@@ -82,5 +82,46 @@ namespace Production_of_goods
         {
 
         }
+
+        private void goodsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void goodsDataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if
+            (
+                (goodsDataGridView.Rows[e.RowIndex].Cells["categoryDataGridViewTextBoxColumn"].Value == null) ||
+                (goodsDataGridView.Rows[e.RowIndex].Cells["categoryDataGridViewTextBoxColumn"].Value.ToString() == "")
+            )
+            {
+                e.CellStyle.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                if
+                (
+                    (goodsDataGridView.Rows[e.RowIndex].Cells["categoryDataGridViewTextBoxColumn"].Value.ToString() == "Категория 1")
+                )
+                {
+                    e.CellStyle.BackColor = Color.SkyBlue;
+                }
+                else
+                {
+                    e.CellStyle.BackColor = Color.Pink;
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

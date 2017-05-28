@@ -102,7 +102,9 @@
             this.stockTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.stockTableAdapter();
             this.idgoodsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.goodsnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.menuStripMain.SuspendLayout();
             this.contextMenuStripMain.SuspendLayout();
             this.toolStripMain.SuspendLayout();
@@ -358,6 +360,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.manufacturerDataGridView);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -451,6 +455,8 @@
             this.goodsDataGridView.Name = "goodsDataGridView";
             this.goodsDataGridView.Size = new System.Drawing.Size(550, 392);
             this.goodsDataGridView.TabIndex = 0;
+            this.goodsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.goodsDataGridView_CellContentClick);
+            this.goodsDataGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.goodsDataGridView_CellFormatting);
             // 
             // goodsBindingSource
             // 
@@ -731,7 +737,35 @@
             // 
             this.categoryDataGridViewTextBoxColumn.DataPropertyName = "category";
             this.categoryDataGridViewTextBoxColumn.HeaderText = "category";
+            this.categoryDataGridViewTextBoxColumn.Items.AddRange(new object[] {
+            "Категория 1",
+            "Категория 2",
+            "Категория 3",
+            "Категория 4",
+            "Категория 5"});
             this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            this.categoryDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.categoryDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(559, 333);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(118, 62);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Обновить базу";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(681, 333);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(118, 62);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Внести изменения в базу";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // FormMain
             // 
@@ -856,7 +890,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn idgoodsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn goodsnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn categoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
