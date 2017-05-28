@@ -50,5 +50,15 @@ namespace Production_of_goods
         {
             Settings.Default.Save();
         }
+
+        private void покупательToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ресурсыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormResourceTable.fr.ShowForm();
+        }
     }
 }

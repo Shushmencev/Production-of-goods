@@ -57,6 +57,18 @@
     <Compile Include="FormManufacturersList.Designer.cs">
       <DependentUpon>FormManufacturersList.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormManufacturersTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManufacturersTable.Designer.cs">
+      <DependentUpon>FormManufacturersTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormResourceTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormResourceTable.Designer.cs">
+      <DependentUpon>FormResourceTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="production_of_goodsDataSet.cs">
       <DependentUpon>production_of_goodsDataSet.xsd</DependentUpon>
     </Compile>
@@ -72,6 +84,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormManufacturersList.resx">
       <DependentUpon>FormManufacturersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManufacturersTable.resx">
+      <DependentUpon>FormManufacturersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormResourceTable.resx">
+      <DependentUpon>FormResourceTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
