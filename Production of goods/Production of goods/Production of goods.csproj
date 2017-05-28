@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormGoodsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGoodsList.Designer.cs">
+      <DependentUpon>FormGoodsList.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,11 +69,23 @@
     <Compile Include="FormManufacturersTable.Designer.cs">
       <DependentUpon>FormManufacturersTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormResourceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormResourceList.Designer.cs">
+      <DependentUpon>FormResourceList.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormResourceTable.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormResourceTable.Designer.cs">
       <DependentUpon>FormResourceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStockList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStockList.Designer.cs">
+      <DependentUpon>FormStockList.cs</DependentUpon>
     </Compile>
     <Compile Include="production_of_goodsDataSet.cs">
       <DependentUpon>production_of_goodsDataSet.xsd</DependentUpon>
@@ -79,6 +97,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormGoodsList.resx">
+      <DependentUpon>FormGoodsList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,8 +109,14 @@
     <EmbeddedResource Include="FormManufacturersTable.resx">
       <DependentUpon>FormManufacturersTable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormResourceList.resx">
+      <DependentUpon>FormResourceList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormResourceTable.resx">
       <DependentUpon>FormResourceTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStockList.resx">
+      <DependentUpon>FormStockList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -43,6 +43,8 @@ namespace Production_of_goods
 
         private void FormMain_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "production_of_goodsDataSet.goods_manufacturer". При необходимости она может быть перемещена или удалена.
+            this.goods_manufacturerTableAdapter.Fill(this.production_of_goodsDataSet.goods_manufacturer);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "production_of_goodsDataSet.customer". При необходимости она может быть перемещена или удалена.
             this.customerTableAdapter.Fill(this.production_of_goodsDataSet.customer);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "production_of_goodsDataSet.order". При необходимости она может быть перемещена или удалена.
@@ -138,14 +140,10 @@ namespace Production_of_goods
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.resourceBindingSource.EndEdit();
-            this.resourceTableAdapter.Update(this.production_of_goodsDataSet.resource);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            this.stockBindingSource.EndEdit();
-            this.stockTableAdapter.Update(this.production_of_goodsDataSet.stock);
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -158,6 +156,36 @@ namespace Production_of_goods
         {
             this.customerBindingSource.EndEdit();
             this.customerTableAdapter.Update(this.production_of_goodsDataSet.customer);
+        }
+
+        private void toolStripMain_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void customerDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void resourcebindingNavigator_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
