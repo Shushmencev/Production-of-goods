@@ -19,14 +19,13 @@ namespace Production_of_goods
 
         private void resourceBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.resourceBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.production_of_goodsDataSet);
-
+            
         }
 
         private void FormStockList_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "production_of_goodsDataSet.stock". При необходимости она может быть перемещена или удалена.
+            this.stockTableAdapter.Fill(this.production_of_goodsDataSet.stock);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "production_of_goodsDataSet.order". При необходимости она может быть перемещена или удалена.
             this.orderTableAdapter.Fill(this.production_of_goodsDataSet.order);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "production_of_goodsDataSet.resource". При необходимости она может быть перемещена или удалена.
@@ -87,6 +86,20 @@ namespace Production_of_goods
         private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Validate();
+                this.resourceBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.production_of_goodsDataSet);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Моя обработка ошибок", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

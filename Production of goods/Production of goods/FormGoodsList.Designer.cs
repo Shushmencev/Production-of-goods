@@ -32,8 +32,8 @@
             System.Windows.Forms.Label id_goodsLabel;
             System.Windows.Forms.Label goods_nameLabel;
             System.Windows.Forms.Label categoryLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGoodsList));
             System.Windows.Forms.Label photoLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGoodsList));
             this.production_of_goodsDataSet = new Production_of_goods.production_of_goodsDataSet();
             this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.goodsTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.goodsTableAdapter();
@@ -56,8 +56,8 @@
             this.categoryTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.photoPictureBox = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.photoPictureBox = new System.Windows.Forms.PictureBox();
             this.openFileDialogPhoto = new System.Windows.Forms.OpenFileDialog();
             id_goodsLabel = new System.Windows.Forms.Label();
             goods_nameLabel = new System.Windows.Forms.Label();
@@ -98,6 +98,15 @@
             categoryLabel.Size = new System.Drawing.Size(51, 13);
             categoryLabel.TabIndex = 5;
             categoryLabel.Text = "category:";
+            // 
+            // photoLabel
+            // 
+            photoLabel.AutoSize = true;
+            photoLabel.Location = new System.Drawing.Point(6, 25);
+            photoLabel.Name = "photoLabel";
+            photoLabel.Size = new System.Drawing.Size(110, 13);
+            photoLabel.TabIndex = 0;
+            photoLabel.Text = "Фотография товара";
             // 
             // production_of_goodsDataSet
             // 
@@ -287,7 +296,7 @@
             this.groupBox1.Size = new System.Drawing.Size(216, 116);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Товар";
             // 
             // groupBox2
             // 
@@ -299,26 +308,7 @@
             this.groupBox2.Size = new System.Drawing.Size(327, 317);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
-            // 
-            // photoLabel
-            // 
-            photoLabel.AutoSize = true;
-            photoLabel.Location = new System.Drawing.Point(6, 25);
-            photoLabel.Name = "photoLabel";
-            photoLabel.Size = new System.Drawing.Size(110, 13);
-            photoLabel.TabIndex = 0;
-            photoLabel.Text = "Фотография товара";
-            // 
-            // photoPictureBox
-            // 
-            this.photoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.goodsBindingSource, "photo", true));
-            this.photoPictureBox.Location = new System.Drawing.Point(6, 51);
-            this.photoPictureBox.Name = "photoPictureBox";
-            this.photoPictureBox.Size = new System.Drawing.Size(315, 260);
-            this.photoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.photoPictureBox.TabIndex = 1;
-            this.photoPictureBox.TabStop = false;
+            this.groupBox2.Text = "Доп. Данные";
             // 
             // button1
             // 
@@ -329,6 +319,16 @@
             this.button1.Text = "Открыть фото";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // photoPictureBox
+            // 
+            this.photoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.goodsBindingSource, "photo", true));
+            this.photoPictureBox.Location = new System.Drawing.Point(6, 51);
+            this.photoPictureBox.Name = "photoPictureBox";
+            this.photoPictureBox.Size = new System.Drawing.Size(315, 260);
+            this.photoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.photoPictureBox.TabIndex = 1;
+            this.photoPictureBox.TabStop = false;
             // 
             // openFileDialogPhoto
             // 

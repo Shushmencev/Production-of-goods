@@ -270,5 +270,16 @@ namespace Production_of_goods
             this.customerBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.production_of_goodsDataSet);
         }
+
+        private void toolStripButton70_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ресурсыНаСкладахToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormStockList fg = new FormStockList();
+            fg.Show();
+        }
     }
 }
