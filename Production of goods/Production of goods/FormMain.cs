@@ -223,5 +223,52 @@ namespace Production_of_goods
             FormGoodsList fg = new FormGoodsList();
             fg.Show();
         }
+
+        private void manufacturerDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void toolStripButton33_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.manufacturerBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.production_of_goodsDataSet);
+        }
+
+        private void toolStripButton40_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.goodsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.production_of_goodsDataSet);
+        }
+
+        private void toolStripButton54_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.resourceBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.production_of_goodsDataSet);
+        }
+
+        private void toolStripButton61_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.stockBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.production_of_goodsDataSet);
+        }
+
+        private void toolStripButton68_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.orderBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.production_of_goodsDataSet);
+        }
+
+        private void toolStripButton12_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.customerBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.production_of_goodsDataSet);
+        }
     }
 }
