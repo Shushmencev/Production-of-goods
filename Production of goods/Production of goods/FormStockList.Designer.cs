@@ -258,7 +258,7 @@
             this.toolStripButton7.Name = "toolStripButton7";
             this.toolStripButton7.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton7.Text = "Сохранить данные";
-            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
+            this.toolStripButton7.Click += new System.EventHandler(this.resourceBindingNavigatorSaveItem_Click);
             // 
             // bindingNavigatorMoveFirstItem
             // 
