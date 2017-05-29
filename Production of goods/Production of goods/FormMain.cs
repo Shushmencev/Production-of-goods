@@ -217,5 +217,11 @@ namespace Production_of_goods
         {
 
         }
+
+        private void товарыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormGoodsList fg = new FormGoodsList();
+            fg.Show();
+        }
     }
 }

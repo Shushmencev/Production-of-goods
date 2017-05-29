@@ -31,5 +31,25 @@ namespace Production_of_goods
             this.goodsTableAdapter.Fill(this.production_of_goodsDataSet.goods);
 
         }
+
+        string fileImage = "";
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openFileDialogPhoto.Title = "Укажите файл для фото";
+            if (openFileDialogPhoto.ShowDialog() == DialogResult.OK)
+            {
+                fileImage = openFileDialogPhoto.FileName;
+                try
+                {
+                    photoPictureBox.Image = new Bitmap(openFileDialogPhoto.FileName);
+                }
+                catch
+                {
+                    MessageBox.Show("Выбран не тот формат файла", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            else fileImage = "";
+        }
     }
 }
