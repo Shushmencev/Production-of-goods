@@ -29,15 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStockList));
             System.Windows.Forms.Label id_stockLabel;
             System.Windows.Forms.Label adressLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStockList));
             this.production_of_goodsDataSet = new Production_of_goods.production_of_goodsDataSet();
             this.resourceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.resourceTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.resourceTableAdapter();
             this.tableAdapterManager = new Production_of_goods.production_of_goodsDataSetTableAdapters.TableAdapterManager();
             this.orderTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.orderTableAdapter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.resourceDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resourceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.stockBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.stockbindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -65,33 +73,43 @@
             this.resourceBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.resourceBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.stockBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.stockTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.stockTableAdapter();
-            this.resourceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.resourceDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_stockTextBox = new System.Windows.Forms.TextBox();
             this.adressTextBox = new System.Windows.Forms.TextBox();
+            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.stockTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.stockTableAdapter();
             id_stockLabel = new System.Windows.Forms.Label();
             adressLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.production_of_goodsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resourceBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.resourceDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resourceBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockbindingNavigator)).BeginInit();
             this.stockbindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.resourceBindingNavigator)).BeginInit();
             this.resourceBindingNavigator.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resourceBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resourceDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // id_stockLabel
+            // 
+            id_stockLabel.AutoSize = true;
+            id_stockLabel.Location = new System.Drawing.Point(6, 27);
+            id_stockLabel.Name = "id_stockLabel";
+            id_stockLabel.Size = new System.Drawing.Size(47, 13);
+            id_stockLabel.TabIndex = 0;
+            id_stockLabel.Text = "id stock:";
+            // 
+            // adressLabel
+            // 
+            adressLabel.AutoSize = true;
+            adressLabel.Location = new System.Drawing.Point(6, 53);
+            adressLabel.Name = "adressLabel";
+            adressLabel.Size = new System.Drawing.Size(41, 13);
+            adressLabel.TabIndex = 2;
+            adressLabel.Text = "adress:";
             // 
             // production_of_goodsDataSet
             // 
@@ -134,6 +152,63 @@
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ресурсы";
+            // 
+            // resourceDataGridView
+            // 
+            this.resourceDataGridView.AutoGenerateColumns = false;
+            this.resourceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.resourceDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.resourceDataGridView.DataSource = this.resourceBindingSource1;
+            this.resourceDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.resourceDataGridView.Location = new System.Drawing.Point(3, 41);
+            this.resourceDataGridView.Name = "resourceDataGridView";
+            this.resourceDataGridView.Size = new System.Drawing.Size(543, 323);
+            this.resourceDataGridView.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_resourse";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id_resourse";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "id_stock";
+            this.dataGridViewTextBoxColumn2.HeaderText = "id_stock";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "volume";
+            this.dataGridViewTextBoxColumn3.HeaderText = "volume";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "price";
+            this.dataGridViewTextBoxColumn4.HeaderText = "price";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "resource_name";
+            this.dataGridViewTextBoxColumn5.HeaderText = "resource_name";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // resourceBindingSource1
+            // 
+            this.resourceBindingSource1.DataMember = "FK_resource_stock";
+            this.resourceBindingSource1.DataSource = this.stockBindingSource;
+            // 
+            // stockBindingSource
+            // 
+            this.stockBindingSource.DataMember = "stock";
+            this.stockBindingSource.DataSource = this.production_of_goodsDataSet;
             // 
             // stockbindingNavigator
             // 
@@ -397,81 +472,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Склад";
             // 
-            // orderBindingSource
-            // 
-            this.orderBindingSource.DataMember = "order";
-            this.orderBindingSource.DataSource = this.production_of_goodsDataSet;
-            // 
-            // stockBindingSource
-            // 
-            this.stockBindingSource.DataMember = "stock";
-            this.stockBindingSource.DataSource = this.production_of_goodsDataSet;
-            // 
-            // stockTableAdapter
-            // 
-            this.stockTableAdapter.ClearBeforeFill = true;
-            // 
-            // resourceBindingSource1
-            // 
-            this.resourceBindingSource1.DataMember = "FK_resource_stock";
-            this.resourceBindingSource1.DataSource = this.stockBindingSource;
-            // 
-            // resourceDataGridView
-            // 
-            this.resourceDataGridView.AutoGenerateColumns = false;
-            this.resourceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.resourceDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
-            this.resourceDataGridView.DataSource = this.resourceBindingSource1;
-            this.resourceDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.resourceDataGridView.Location = new System.Drawing.Point(3, 41);
-            this.resourceDataGridView.Name = "resourceDataGridView";
-            this.resourceDataGridView.Size = new System.Drawing.Size(543, 323);
-            this.resourceDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_resourse";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id_resourse";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "id_stock";
-            this.dataGridViewTextBoxColumn2.HeaderText = "id_stock";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "volume";
-            this.dataGridViewTextBoxColumn3.HeaderText = "volume";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "price";
-            this.dataGridViewTextBoxColumn4.HeaderText = "price";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "resource_name";
-            this.dataGridViewTextBoxColumn5.HeaderText = "resource_name";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // id_stockLabel
-            // 
-            id_stockLabel.AutoSize = true;
-            id_stockLabel.Location = new System.Drawing.Point(6, 27);
-            id_stockLabel.Name = "id_stockLabel";
-            id_stockLabel.Size = new System.Drawing.Size(47, 13);
-            id_stockLabel.TabIndex = 0;
-            id_stockLabel.Text = "id stock:";
-            // 
             // id_stockTextBox
             // 
             this.id_stockTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stockBindingSource, "id_stock", true));
@@ -480,15 +480,6 @@
             this.id_stockTextBox.Size = new System.Drawing.Size(100, 20);
             this.id_stockTextBox.TabIndex = 1;
             // 
-            // adressLabel
-            // 
-            adressLabel.AutoSize = true;
-            adressLabel.Location = new System.Drawing.Point(6, 53);
-            adressLabel.Name = "adressLabel";
-            adressLabel.Size = new System.Drawing.Size(41, 13);
-            adressLabel.TabIndex = 2;
-            adressLabel.Text = "adress:";
-            // 
             // adressTextBox
             // 
             this.adressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stockBindingSource, "adress", true));
@@ -496,6 +487,15 @@
             this.adressTextBox.Name = "adressTextBox";
             this.adressTextBox.Size = new System.Drawing.Size(100, 20);
             this.adressTextBox.TabIndex = 3;
+            // 
+            // orderBindingSource
+            // 
+            this.orderBindingSource.DataMember = "order";
+            this.orderBindingSource.DataSource = this.production_of_goodsDataSet;
+            // 
+            // stockTableAdapter
+            // 
+            this.stockTableAdapter.ClearBeforeFill = true;
             // 
             // FormStockList
             // 
@@ -512,6 +512,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.resourceBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.resourceDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resourceBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockbindingNavigator)).EndInit();
             this.stockbindingNavigator.ResumeLayout(false);
             this.stockbindingNavigator.PerformLayout();
@@ -521,9 +524,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resourceBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resourceDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

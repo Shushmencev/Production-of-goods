@@ -21,14 +21,22 @@ namespace Production_of_goods
         {
             try
             {
+                MessageBox.Show("(С) ТУСУР, ФБ, Шушменцев Антон Васильевич, группа 735, 2017",
+                "О программе", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Validate();
                 this.stockBindingSource.EndEdit();
                 this.tableAdapterManager.UpdateAll(this.production_of_goodsDataSet);
+                
             }
             catch (Exception err)
             {
-                MessageBox.Show("Ошибка при заполнении таблицы 'Ресурсы на складе'",
-                    "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ошибка при заполнении таблицы 'Ресурсы на складе'", "Ошибка",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                MessageBox.Show("Finally",
+                "Finally", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -94,11 +102,6 @@ namespace Production_of_goods
         }
 
         private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripButton7_Click(object sender, EventArgs e)
         {
 
         }

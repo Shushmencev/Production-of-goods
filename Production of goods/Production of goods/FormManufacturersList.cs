@@ -33,7 +33,6 @@ namespace Production_of_goods
             this.Validate();
             this.manufacturerBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.production_of_goodsDataSet);
-
         }
 
         private void FormManufacturersList_Load(object sender, EventArgs e)

@@ -236,6 +236,8 @@ namespace Production_of_goods
             this.tableAdapterManager.UpdateAll(this.production_of_goodsDataSet);
         }
 
+        
+
         private void toolStripButton40_Click_1(object sender, EventArgs e)
         {
             this.Validate();
@@ -280,6 +282,127 @@ namespace Production_of_goods
         {
             FormStockList fg = new FormStockList();
             fg.Show();
+        }
+
+        private void manufacturerDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            MessageBox.Show(
+                   "Ошибка при заполнении таблицы 'Производители'", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error
+                   );
+        }
+
+        private void goodsDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            MessageBox.Show(
+                   "Ошибка при заполнении таблицы 'Товары'", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error
+                   );
+        }
+
+        private void resourceDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            MessageBox.Show(
+                   "Ошибка при заполнении таблицы 'Ресурсы'", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error
+                   );
+        }
+
+        private void stockDataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            MessageBox.Show(
+                   "Ошибка при заполнении таблицы 'Склады'", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error
+                   );
+        }
+
+        private void orderDataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            MessageBox.Show(
+                   "Ошибка при заполнении таблицы 'Сделки'", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error
+                   );
+        }
+
+        private void customerDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            MessageBox.Show(
+                   "Ошибка при заполнении таблицы 'Заказчики'", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error
+                   );
+        }
+
+        string GetSelectedFieldName()
+        {
+            return
+                manufacturerDataGridView.Columns[manufacturerDataGridView.CurrentCell.ColumnIndex
+                ].DataPropertyName;
+        }
+
+        private void toolStripButtonManufacturerFind_Click(object sender, EventArgs e)
+        {
+            if (toolStripTextBoxManufacturerFind.Text == "")
+            {
+                MessageBox.Show(
+                    "Вы ничего не задали", "Внимание",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;                    
+            }
+
+            int indexPos;
+
+            try
+            {
+                indexPos = manufacturerBindingSource.Find(GetSelectedFieldName(),
+                    toolStripTextBoxManufacturerFind.Text);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Ошибка поиска \n" + err.Message);
+                return;
+            }
+
+            if (indexPos > -1)
+            {
+                manufacturerBindingSource.Position = indexPos;
+            }
+            else
+            {
+                MessageBox.Show("Таких сотрудников нет", "Внимание",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                manufacturerBindingSource.Position = 0;
+            }
+        }
+
+        private void checkBoxManufacturerFind_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxManufacturerFind.Checked)
+            {
+                if (toolStripTextBoxManufacturerFind.Text == "")
+                {
+                    MessageBox.Show(
+                        "Вы ничего не задали", "Внимание",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information
+                        );
+                }
+                else
+                {
+                    try
+                    {
+                        manufacturerBindingSource.Filter =
+                            GetSelectedFieldName() + "='" + toolStripTextBoxManufacturerFind.Text + "'";
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Ошибка фильтрации \n" + err.Message);
+                    }
+                }
+            }
+            else
+            {
+                manufacturerBindingSource.Filter = "";
+            }
+
+            if  (manufacturerBindingSource.Count == 0)
+            {
+                MessageBox.Show("Нет таких");
+                manufacturerBindingSource.Filter = "";
+                checkBoxManufacturerFind.Checked = false;
+            }
         }
     }
 }
