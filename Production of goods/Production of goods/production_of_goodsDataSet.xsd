@@ -464,6 +464,7 @@ SELECT id_stock, adress FROM stock WHERE (id_stock = @id_stock)</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="info" msdata:ReadOnly="true" msdata:Expression="e_mail + ' ' + phone_number" msprop:Generator_ColumnVarNameInTable="columninfo" msprop:Generator_ColumnPropNameInRow="info" msprop:Generator_ColumnPropNameInTable="infoColumn" msprop:Generator_UserColumnName="info" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -541,6 +542,7 @@ SELECT id_stock, adress FROM stock WHERE (id_stock = @id_stock)</CommandText>
               <xs:element name="id_customer" msprop:Generator_ColumnVarNameInTable="columnid_customer" msprop:Generator_ColumnPropNameInRow="id_customer" msprop:Generator_ColumnPropNameInTable="id_customerColumn" msprop:Generator_UserColumnName="id_customer" type="xs:int" />
               <xs:element name="id_goods" msprop:Generator_ColumnVarNameInTable="columnid_goods" msprop:Generator_ColumnPropNameInRow="id_goods" msprop:Generator_ColumnPropNameInTable="id_goodsColumn" msprop:Generator_UserColumnName="id_goods" type="xs:int" />
               <xs:element name="data_time" msprop:Generator_ColumnVarNameInTable="columndata_time" msprop:Generator_ColumnPropNameInRow="data_time" msprop:Generator_ColumnPropNameInTable="data_timeColumn" msprop:Generator_UserColumnName="data_time" type="xs:dateTime" />
+              <xs:element name="contacts" msdata:ReadOnly="true" msdata:Expression="Parent(FK_order_customer).info" msprop:Generator_ColumnVarNameInTable="columncontacts" msprop:Generator_ColumnPropNameInRow="contacts" msprop:Generator_ColumnPropNameInTable="contactsColumn" msprop:Generator_UserColumnName="contacts" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

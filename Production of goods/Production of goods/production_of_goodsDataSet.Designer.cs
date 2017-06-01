@@ -399,7 +399,7 @@ namespace Production_of_goods {
             this.Namespace = "http://tempuri.org/production_of_goodsDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablecustomer = new customerDataTable();
+            this.tablecustomer = new customerDataTable(false);
             base.Tables.Add(this.tablecustomer);
             this.tablegoods = new goodsDataTable();
             base.Tables.Add(this.tablegoods);
@@ -409,7 +409,7 @@ namespace Production_of_goods {
             base.Tables.Add(this.tablegoods_resource);
             this.tablemanufacturer = new manufacturerDataTable();
             base.Tables.Add(this.tablemanufacturer);
-            this.tableorder = new orderDataTable();
+            this.tableorder = new orderDataTable(false);
             base.Tables.Add(this.tableorder);
             this.tableresource = new resourceDataTable(false);
             base.Tables.Add(this.tableresource);
@@ -551,6 +551,8 @@ namespace Production_of_goods {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitExpressions() {
+            this.customer.infoColumn.Expression = "e_mail + \' \' + phone_number";
+            this.order.contactsColumn.Expression = "Parent(FK_order_customer).info";
             this.resource.sum_priceColumn.Expression = "volume*price";
         }
         
@@ -595,12 +597,23 @@ namespace Production_of_goods {
             
             private global::System.Data.DataColumn columnaddress;
             
+            private global::System.Data.DataColumn columninfo;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public customerDataTable() {
+            public customerDataTable() : 
+                    this(false) {
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public customerDataTable(bool initExpressions) {
                 this.TableName = "customer";
                 this.BeginInit();
                 this.InitClass();
+                if ((initExpressions == true)) {
+                    this.InitExpressions();
+                }
                 this.EndInit();
             }
             
@@ -670,6 +683,14 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn infoColumn {
+                get {
+                    return this.columninfo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -705,6 +726,22 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public customerRow AddcustomerRow(string organization_name, string e_mail, string phone_number, string address, string info) {
+                customerRow rowcustomerRow = ((customerRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        organization_name,
+                        e_mail,
+                        phone_number,
+                        address,
+                        info};
+                rowcustomerRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowcustomerRow);
+                return rowcustomerRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public customerRow AddcustomerRow(string organization_name, string e_mail, string phone_number, string address) {
                 customerRow rowcustomerRow = ((customerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -712,7 +749,8 @@ namespace Production_of_goods {
                         organization_name,
                         e_mail,
                         phone_number,
-                        address};
+                        address,
+                        null};
                 rowcustomerRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowcustomerRow);
                 return rowcustomerRow;
@@ -747,6 +785,7 @@ namespace Production_of_goods {
                 this.columne_mail = base.Columns["e_mail"];
                 this.columnphone_number = base.Columns["phone_number"];
                 this.columnaddress = base.Columns["address"];
+                this.columninfo = base.Columns["info"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -762,6 +801,8 @@ namespace Production_of_goods {
                 base.Columns.Add(this.columnphone_number);
                 this.columnaddress = new global::System.Data.DataColumn("address", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnaddress);
+                this.columninfo = new global::System.Data.DataColumn("info", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columninfo);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_customer}, true));
                 this.columnid_customer.AutoIncrement = true;
@@ -776,6 +817,7 @@ namespace Production_of_goods {
                 this.columnphone_number.MaxLength = 11;
                 this.columnaddress.AllowDBNull = false;
                 this.columnaddress.MaxLength = 50;
+                this.columninfo.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -794,6 +836,12 @@ namespace Production_of_goods {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
                 return typeof(customerRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitExpressions() {
+                this.infoColumn.Expression = "e_mail + \' \' + phone_number";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2090,12 +2138,23 @@ namespace Production_of_goods {
             
             private global::System.Data.DataColumn columndata_time;
             
+            private global::System.Data.DataColumn columncontacts;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public orderDataTable() {
+            public orderDataTable() : 
+                    this(false) {
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public orderDataTable(bool initExpressions) {
                 this.TableName = "order";
                 this.BeginInit();
                 this.InitClass();
+                if ((initExpressions == true)) {
+                    this.InitExpressions();
+                }
                 this.EndInit();
             }
             
@@ -2157,6 +2216,14 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn contactsColumn {
+                get {
+                    return this.columncontacts;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2192,13 +2259,35 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public orderRow AddorderRow(customerRow parentcustomerRowByFK_order_customer, goodsRow parentgoodsRowByFK_order_goods, System.DateTime data_time, string contacts) {
+                orderRow roworderRow = ((orderRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        null,
+                        null,
+                        data_time,
+                        contacts};
+                if ((parentcustomerRowByFK_order_customer != null)) {
+                    columnValuesArray[1] = parentcustomerRowByFK_order_customer[0];
+                }
+                if ((parentgoodsRowByFK_order_goods != null)) {
+                    columnValuesArray[2] = parentgoodsRowByFK_order_goods[0];
+                }
+                roworderRow.ItemArray = columnValuesArray;
+                this.Rows.Add(roworderRow);
+                return roworderRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public orderRow AddorderRow(customerRow parentcustomerRowByFK_order_customer, goodsRow parentgoodsRowByFK_order_goods, System.DateTime data_time) {
                 orderRow roworderRow = ((orderRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         null,
-                        data_time};
+                        data_time,
+                        null};
                 if ((parentcustomerRowByFK_order_customer != null)) {
                     columnValuesArray[1] = parentcustomerRowByFK_order_customer[0];
                 }
@@ -2238,6 +2327,7 @@ namespace Production_of_goods {
                 this.columnid_customer = base.Columns["id_customer"];
                 this.columnid_goods = base.Columns["id_goods"];
                 this.columndata_time = base.Columns["data_time"];
+                this.columncontacts = base.Columns["contacts"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2251,6 +2341,8 @@ namespace Production_of_goods {
                 base.Columns.Add(this.columnid_goods);
                 this.columndata_time = new global::System.Data.DataColumn("data_time", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndata_time);
+                this.columncontacts = new global::System.Data.DataColumn("contacts", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncontacts);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_order}, true));
                 this.columnid_order.AutoIncrement = true;
@@ -2260,6 +2352,7 @@ namespace Production_of_goods {
                 this.columnid_customer.AllowDBNull = false;
                 this.columnid_goods.AllowDBNull = false;
                 this.columndata_time.AllowDBNull = false;
+                this.columncontacts.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2278,6 +2371,12 @@ namespace Production_of_goods {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
                 return typeof(orderRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitExpressions() {
+                this.contactsColumn.Expression = "Parent(FK_order_customer).info";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3107,6 +3206,34 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string info {
+                get {
+                    try {
+                        return ((string)(this[this.tablecustomer.infoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'info\' в таблице \'customer\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecustomer.infoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsinfoNull() {
+                return this.IsNull(this.tablecustomer.infoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetinfoNull() {
+                this[this.tablecustomer.infoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public orderRow[] GetorderRows() {
                 if ((this.Table.ChildRelations["FK_order_customer"] == null)) {
                     return new orderRow[0];
@@ -3502,6 +3629,22 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string contacts {
+                get {
+                    try {
+                        return ((string)(this[this.tableorder.contactsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'contacts\' в таблице \'order\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableorder.contactsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public customerRow customerRow {
                 get {
                     return ((customerRow)(this.GetParentRow(this.Table.ParentRelations["FK_order_customer"])));
@@ -3520,6 +3663,18 @@ namespace Production_of_goods {
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_order_goods"]);
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IscontactsNull() {
+                return this.IsNull(this.tableorder.contactsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetcontactsNull() {
+                this[this.tableorder.contactsColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4170,7 +4325,7 @@ SELECT id_customer, organization_name, e_mail, phone_number, address FROM custom
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual production_of_goodsDataSet.customerDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            production_of_goodsDataSet.customerDataTable dataTable = new production_of_goodsDataSet.customerDataTable();
+            production_of_goodsDataSet.customerDataTable dataTable = new production_of_goodsDataSet.customerDataTable(true);
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5828,7 +5983,7 @@ SELECT id_order, id_customer, id_goods, data_time FROM [order] WHERE (id_order =
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual production_of_goodsDataSet.orderDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            production_of_goodsDataSet.orderDataTable dataTable = new production_of_goodsDataSet.orderDataTable();
+            production_of_goodsDataSet.orderDataTable dataTable = new production_of_goodsDataSet.orderDataTable(true);
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

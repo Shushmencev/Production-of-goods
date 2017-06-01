@@ -82,6 +82,7 @@
             this.toolStripButton40 = new System.Windows.Forms.ToolStripButton();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBoxManufacturerFind = new System.Windows.Forms.CheckBox();
             this.manufacturerDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -101,6 +102,9 @@
             this.toolStripButton32 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton33 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator29 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBoxManufacturerFind = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripButtonManufacturerFind = new System.Windows.Forms.ToolStripButton();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -146,9 +150,9 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.orderDataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contacts = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.orderNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton62 = new System.Windows.Forms.ToolStripButton();
@@ -167,11 +171,6 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.customerDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customerbindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
@@ -245,10 +244,11 @@
             this.resourceTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.resourceTableAdapter();
             this.stockTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.stockTableAdapter();
             this.goods_manufacturerTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.goods_manufacturerTableAdapter();
-            this.toolStripSeparator29 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripTextBoxManufacturerFind = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripButtonManufacturerFind = new System.Windows.Forms.ToolStripButton();
-            this.checkBoxManufacturerFind = new System.Windows.Forms.CheckBox();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStripMain.SuspendLayout();
             this.contextMenuStripMain.SuspendLayout();
             this.toolStripMain.SuspendLayout();
@@ -765,6 +765,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Таблица";
             // 
+            // checkBoxManufacturerFind
+            // 
+            this.checkBoxManufacturerFind.AutoSize = true;
+            this.checkBoxManufacturerFind.Location = new System.Drawing.Point(463, 21);
+            this.checkBoxManufacturerFind.Name = "checkBoxManufacturerFind";
+            this.checkBoxManufacturerFind.Size = new System.Drawing.Size(66, 17);
+            this.checkBoxManufacturerFind.TabIndex = 6;
+            this.checkBoxManufacturerFind.Text = "Фильтр";
+            this.checkBoxManufacturerFind.UseVisualStyleBackColor = true;
+            this.checkBoxManufacturerFind.CheckedChanged += new System.EventHandler(this.checkBoxManufacturerFind_CheckedChanged);
+            // 
             // manufacturerDataGridView
             // 
             this.manufacturerDataGridView.AllowUserToOrderColumns = true;
@@ -943,6 +954,25 @@
             this.toolStripButton33.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton33.Text = "Сохранить данные";
             this.toolStripButton33.Click += new System.EventHandler(this.toolStripButton33_Click);
+            // 
+            // toolStripSeparator29
+            // 
+            this.toolStripSeparator29.Name = "toolStripSeparator29";
+            this.toolStripSeparator29.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripTextBoxManufacturerFind
+            // 
+            this.toolStripTextBoxManufacturerFind.Name = "toolStripTextBoxManufacturerFind";
+            this.toolStripTextBoxManufacturerFind.Size = new System.Drawing.Size(100, 25);
+            // 
+            // toolStripButtonManufacturerFind
+            // 
+            this.toolStripButtonManufacturerFind.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonManufacturerFind.Image")));
+            this.toolStripButtonManufacturerFind.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonManufacturerFind.Name = "toolStripButtonManufacturerFind";
+            this.toolStripButtonManufacturerFind.Size = new System.Drawing.Size(62, 22);
+            this.toolStripButtonManufacturerFind.Text = "Поиск";
+            this.toolStripButtonManufacturerFind.Click += new System.EventHandler(this.toolStripButtonManufacturerFind_Click);
             // 
             // tabControl
             // 
@@ -1372,9 +1402,9 @@
             this.orderDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.orderDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn30,
-            this.dataGridViewTextBoxColumn31,
             this.dataGridViewTextBoxColumn32,
-            this.dataGridViewTextBoxColumn33});
+            this.dataGridViewTextBoxColumn33,
+            this.contacts});
             this.orderDataGridView1.DataSource = this.orderBindingSource;
             this.orderDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.orderDataGridView1.Location = new System.Drawing.Point(3, 41);
@@ -1389,12 +1419,6 @@
             this.dataGridViewTextBoxColumn30.HeaderText = "id_order";
             this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
             // 
-            // dataGridViewTextBoxColumn31
-            // 
-            this.dataGridViewTextBoxColumn31.DataPropertyName = "id_customer";
-            this.dataGridViewTextBoxColumn31.HeaderText = "id_customer";
-            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
-            // 
             // dataGridViewTextBoxColumn32
             // 
             this.dataGridViewTextBoxColumn32.DataPropertyName = "id_goods";
@@ -1406,6 +1430,13 @@
             this.dataGridViewTextBoxColumn33.DataPropertyName = "data_time";
             this.dataGridViewTextBoxColumn33.HeaderText = "data_time";
             this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
+            // 
+            // contacts
+            // 
+            this.contacts.DataPropertyName = "contacts";
+            this.contacts.HeaderText = "contacts";
+            this.contacts.Name = "contacts";
+            this.contacts.ReadOnly = true;
             // 
             // orderBindingSource
             // 
@@ -1583,36 +1614,6 @@
             this.customerDataGridView.Size = new System.Drawing.Size(543, 276);
             this.customerDataGridView.TabIndex = 7;
             this.customerDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.customerDataGridView_DataError);
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "id_customer";
-            this.dataGridViewTextBoxColumn19.HeaderText = "id_customer";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "organization_name";
-            this.dataGridViewTextBoxColumn20.HeaderText = "organization_name";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "e_mail";
-            this.dataGridViewTextBoxColumn21.HeaderText = "e_mail";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "phone_number";
-            this.dataGridViewTextBoxColumn22.HeaderText = "phone_number";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "address";
-            this.dataGridViewTextBoxColumn23.HeaderText = "address";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
             // 
             // customerBindingSource
             // 
@@ -2189,35 +2190,35 @@
             // 
             this.goods_manufacturerTableAdapter.ClearBeforeFill = true;
             // 
-            // toolStripSeparator29
+            // dataGridViewTextBoxColumn19
             // 
-            this.toolStripSeparator29.Name = "toolStripSeparator29";
-            this.toolStripSeparator29.Size = new System.Drawing.Size(6, 25);
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "id_customer";
+            this.dataGridViewTextBoxColumn19.HeaderText = "id_customer";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
             // 
-            // toolStripTextBoxManufacturerFind
+            // dataGridViewTextBoxColumn20
             // 
-            this.toolStripTextBoxManufacturerFind.Name = "toolStripTextBoxManufacturerFind";
-            this.toolStripTextBoxManufacturerFind.Size = new System.Drawing.Size(100, 25);
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "organization_name";
+            this.dataGridViewTextBoxColumn20.HeaderText = "organization_name";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
             // 
-            // toolStripButtonManufacturerFind
+            // dataGridViewTextBoxColumn21
             // 
-            this.toolStripButtonManufacturerFind.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonManufacturerFind.Image")));
-            this.toolStripButtonManufacturerFind.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonManufacturerFind.Name = "toolStripButtonManufacturerFind";
-            this.toolStripButtonManufacturerFind.Size = new System.Drawing.Size(62, 22);
-            this.toolStripButtonManufacturerFind.Text = "Поиск";
-            this.toolStripButtonManufacturerFind.Click += new System.EventHandler(this.toolStripButtonManufacturerFind_Click);
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "e_mail";
+            this.dataGridViewTextBoxColumn21.HeaderText = "e_mail";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
             // 
-            // checkBoxManufacturerFind
+            // dataGridViewTextBoxColumn22
             // 
-            this.checkBoxManufacturerFind.AutoSize = true;
-            this.checkBoxManufacturerFind.Location = new System.Drawing.Point(463, 21);
-            this.checkBoxManufacturerFind.Name = "checkBoxManufacturerFind";
-            this.checkBoxManufacturerFind.Size = new System.Drawing.Size(66, 17);
-            this.checkBoxManufacturerFind.TabIndex = 6;
-            this.checkBoxManufacturerFind.Text = "Фильтр";
-            this.checkBoxManufacturerFind.UseVisualStyleBackColor = true;
-            this.checkBoxManufacturerFind.CheckedChanged += new System.EventHandler(this.checkBoxManufacturerFind_CheckedChanged);
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "phone_number";
+            this.dataGridViewTextBoxColumn22.HeaderText = "phone_number";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "address";
+            this.dataGridViewTextBoxColumn23.HeaderText = "address";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
             // 
             // FormMain
             // 
@@ -2481,10 +2482,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton61;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.DataGridView orderDataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
         private System.Windows.Forms.BindingNavigator orderNavigator;
         private System.Windows.Forms.ToolStripButton toolStripButton62;
         private System.Windows.Forms.ToolStripLabel toolStripLabel9;
@@ -2500,11 +2497,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton68;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.DataGridView customerDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
         private System.Windows.Forms.BindingNavigator customerbindingNavigator;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
@@ -2524,6 +2516,15 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator29;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBoxManufacturerFind;
         private System.Windows.Forms.ToolStripButton toolStripButtonManufacturerFind;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contacts;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
     }
 }
 
