@@ -404,5 +404,10 @@ namespace Production_of_goods
                 checkBoxManufacturerFind.Checked = false;
             }
         }
+
+        private void прочееToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSQL.fs.Show();
+        }
     }
 }

@@ -171,6 +171,11 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.customerDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customerbindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
@@ -244,11 +249,7 @@
             this.resourceTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.resourceTableAdapter();
             this.stockTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.stockTableAdapter();
             this.goods_manufacturerTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.goods_manufacturerTableAdapter();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.прочееToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMain.SuspendLayout();
             this.contextMenuStripMain.SuspendLayout();
             this.toolStripMain.SuspendLayout();
@@ -343,7 +344,8 @@
             this.производителиToolStripMenuItem,
             this.товарыToolStripMenuItem,
             this.ресурсыToolStripMenuItem,
-            this.ресурсыНаСкладахToolStripMenuItem});
+            this.ресурсыНаСкладахToolStripMenuItem,
+            this.прочееToolStripMenuItem});
             this.справочникиToolStripMenuItem.Name = "справочникиToolStripMenuItem";
             this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
             this.справочникиToolStripMenuItem.Text = "Справочник";
@@ -1615,6 +1617,36 @@
             this.customerDataGridView.TabIndex = 7;
             this.customerDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.customerDataGridView_DataError);
             // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "id_customer";
+            this.dataGridViewTextBoxColumn19.HeaderText = "id_customer";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "organization_name";
+            this.dataGridViewTextBoxColumn20.HeaderText = "organization_name";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "e_mail";
+            this.dataGridViewTextBoxColumn21.HeaderText = "e_mail";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "phone_number";
+            this.dataGridViewTextBoxColumn22.HeaderText = "phone_number";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "address";
+            this.dataGridViewTextBoxColumn23.HeaderText = "address";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            // 
             // customerBindingSource
             // 
             this.customerBindingSource.DataMember = "customer";
@@ -2190,35 +2222,12 @@
             // 
             this.goods_manufacturerTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn19
+            // прочееToolStripMenuItem
             // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "id_customer";
-            this.dataGridViewTextBoxColumn19.HeaderText = "id_customer";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "organization_name";
-            this.dataGridViewTextBoxColumn20.HeaderText = "organization_name";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "e_mail";
-            this.dataGridViewTextBoxColumn21.HeaderText = "e_mail";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "phone_number";
-            this.dataGridViewTextBoxColumn22.HeaderText = "phone_number";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "address";
-            this.dataGridViewTextBoxColumn23.HeaderText = "address";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.прочееToolStripMenuItem.Name = "прочееToolStripMenuItem";
+            this.прочееToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.прочееToolStripMenuItem.Text = "Прочее";
+            this.прочееToolStripMenuItem.Click += new System.EventHandler(this.прочееToolStripMenuItem_Click);
             // 
             // FormMain
             // 
@@ -2525,6 +2534,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.ToolStripMenuItem прочееToolStripMenuItem;
     }
 }
 

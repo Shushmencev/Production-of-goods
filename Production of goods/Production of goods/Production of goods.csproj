@@ -81,6 +81,12 @@
     <Compile Include="FormResourceTable.Designer.cs">
       <DependentUpon>FormResourceTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSQL.Designer.cs">
+      <DependentUpon>FormSQL.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormStockList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormResourceTable.resx">
       <DependentUpon>FormResourceTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSQL.resx">
+      <DependentUpon>FormSQL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormStockList.resx">
       <DependentUpon>FormStockList.cs</DependentUpon>
