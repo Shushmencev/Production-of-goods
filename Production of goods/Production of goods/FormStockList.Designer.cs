@@ -77,6 +77,7 @@
             this.adressTextBox = new System.Windows.Forms.TextBox();
             this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.stockTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.stockTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
             id_stockLabel = new System.Windows.Forms.Label();
             adressLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.production_of_goodsDataSet)).BeginInit();
@@ -455,12 +456,13 @@
             this.resourceBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.resourceBindingNavigator.Name = "resourceBindingNavigator";
             this.resourceBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.resourceBindingNavigator.Size = new System.Drawing.Size(605, 25);
+            this.resourceBindingNavigator.Size = new System.Drawing.Size(572, 25);
             this.resourceBindingNavigator.TabIndex = 0;
             this.resourceBindingNavigator.Text = "bindingNavigator1";
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(id_stockLabel);
             this.groupBox2.Controls.Add(this.id_stockTextBox);
             this.groupBox2.Controls.Add(adressLabel);
@@ -477,7 +479,7 @@
             this.id_stockTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stockBindingSource, "id_stock", true));
             this.id_stockTextBox.Location = new System.Drawing.Point(59, 24);
             this.id_stockTextBox.Name = "id_stockTextBox";
-            this.id_stockTextBox.Size = new System.Drawing.Size(100, 20);
+            this.id_stockTextBox.Size = new System.Drawing.Size(115, 20);
             this.id_stockTextBox.TabIndex = 1;
             // 
             // adressTextBox
@@ -485,7 +487,7 @@
             this.adressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.stockBindingSource, "adress", true));
             this.adressTextBox.Location = new System.Drawing.Point(59, 50);
             this.adressTextBox.Name = "adressTextBox";
-            this.adressTextBox.Size = new System.Drawing.Size(100, 20);
+            this.adressTextBox.Size = new System.Drawing.Size(115, 20);
             this.adressTextBox.TabIndex = 3;
             // 
             // orderBindingSource
@@ -497,11 +499,21 @@
             // 
             this.stockTableAdapter.ClearBeforeFill = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(192, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(81, 22);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Склад";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormStockList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 587);
+            this.ClientSize = new System.Drawing.Size(572, 587);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.resourceBindingNavigator);
@@ -576,5 +588,6 @@
         private System.Windows.Forms.BindingSource resourceBindingSource1;
         private System.Windows.Forms.TextBox id_stockTextBox;
         private System.Windows.Forms.TextBox adressTextBox;
+        private System.Windows.Forms.Button button1;
     }
 }

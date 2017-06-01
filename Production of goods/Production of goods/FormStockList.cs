@@ -12,6 +12,7 @@ namespace Production_of_goods
 {
     public partial class FormStockList : Form
     {
+
         public FormStockList()
         {
             InitializeComponent();
@@ -104,6 +105,22 @@ namespace Production_of_goods
         private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int id = -1;
+            if (((DataRowView)stockBindingSource.Current)["id_stock"].ToString() != "")
+            {
+                id = (int)((DataRowView)stockBindingSource.Current)["id_stock"];
+            }
+            id = FormStocks.fs.ShowSelectForm(id);
+            if (id >= 0)
+            {
+                MessageBox.Show(id.ToString());
+                ((DataRowView)stockBindingSource.Current)["id_stock"] = id;
+                stockBindingSource.EndEdit();
+            }
         }
     }
 }

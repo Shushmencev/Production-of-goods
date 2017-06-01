@@ -65,6 +65,7 @@ namespace Production_of_goods {
             base.Tables.CollectionChanged += schemaChangedHandler;
             base.Relations.CollectionChanged += schemaChangedHandler;
             this.EndInit();
+            this.InitExpressions();
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -76,6 +77,9 @@ namespace Production_of_goods {
                 global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler1 = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
                 this.Tables.CollectionChanged += schemaChangedHandler1;
                 this.Relations.CollectionChanged += schemaChangedHandler1;
+                if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.ExcludeSchema)) {
+                    this.InitExpressions();
+                }
                 return;
             }
             string strSchema = ((string)(info.GetValue("XmlSchema", typeof(string))));
@@ -117,6 +121,7 @@ namespace Production_of_goods {
             }
             else {
                 this.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
+                this.InitExpressions();
             }
             this.GetSerializationData(info, context);
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -248,6 +253,7 @@ namespace Production_of_goods {
         public override global::System.Data.DataSet Clone() {
             production_of_goodsDataSet cln = ((production_of_goodsDataSet)(base.Clone()));
             cln.InitVars();
+            cln.InitExpressions();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
         }
@@ -405,7 +411,7 @@ namespace Production_of_goods {
             base.Tables.Add(this.tablemanufacturer);
             this.tableorder = new orderDataTable();
             base.Tables.Add(this.tableorder);
-            this.tableresource = new resourceDataTable();
+            this.tableresource = new resourceDataTable(false);
             base.Tables.Add(this.tableresource);
             this.tablestock = new stockDataTable();
             base.Tables.Add(this.tablestock);
@@ -540,6 +546,12 @@ namespace Production_of_goods {
             }
             xs.Add(dsSchema);
             return type;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitExpressions() {
+            this.resource.sum_priceColumn.Expression = "volume*price";
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -2391,12 +2403,23 @@ namespace Production_of_goods {
             
             private global::System.Data.DataColumn columnresource_name;
             
+            private global::System.Data.DataColumn columnsum_price;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public resourceDataTable() {
+            public resourceDataTable() : 
+                    this(false) {
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public resourceDataTable(bool initExpressions) {
                 this.TableName = "resource";
                 this.BeginInit();
                 this.InitClass();
+                if ((initExpressions == true)) {
+                    this.InitExpressions();
+                }
                 this.EndInit();
             }
             
@@ -2466,6 +2489,14 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn sum_priceColumn {
+                get {
+                    return this.columnsum_price;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2501,6 +2532,25 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public resourceRow AddresourceRow(stockRow parentstockRowByFK_resource_stock, double volume, decimal price, string resource_name, decimal sum_price) {
+                resourceRow rowresourceRow = ((resourceRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        null,
+                        volume,
+                        price,
+                        resource_name,
+                        sum_price};
+                if ((parentstockRowByFK_resource_stock != null)) {
+                    columnValuesArray[1] = parentstockRowByFK_resource_stock[0];
+                }
+                rowresourceRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowresourceRow);
+                return rowresourceRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public resourceRow AddresourceRow(stockRow parentstockRowByFK_resource_stock, double volume, decimal price, string resource_name) {
                 resourceRow rowresourceRow = ((resourceRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -2508,7 +2558,8 @@ namespace Production_of_goods {
                         null,
                         volume,
                         price,
-                        resource_name};
+                        resource_name,
+                        null};
                 if ((parentstockRowByFK_resource_stock != null)) {
                     columnValuesArray[1] = parentstockRowByFK_resource_stock[0];
                 }
@@ -2546,6 +2597,7 @@ namespace Production_of_goods {
                 this.columnvolume = base.Columns["volume"];
                 this.columnprice = base.Columns["price"];
                 this.columnresource_name = base.Columns["resource_name"];
+                this.columnsum_price = base.Columns["sum_price"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2561,6 +2613,8 @@ namespace Production_of_goods {
                 base.Columns.Add(this.columnprice);
                 this.columnresource_name = new global::System.Data.DataColumn("resource_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnresource_name);
+                this.columnsum_price = new global::System.Data.DataColumn("sum_price", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsum_price);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_resourse}, true));
                 this.columnid_resourse.AutoIncrement = true;
@@ -2573,6 +2627,7 @@ namespace Production_of_goods {
                 this.columnprice.AllowDBNull = false;
                 this.columnresource_name.AllowDBNull = false;
                 this.columnresource_name.MaxLength = 50;
+                this.columnsum_price.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2591,6 +2646,12 @@ namespace Production_of_goods {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
                 return typeof(resourceRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitExpressions() {
+                this.sum_priceColumn.Expression = "volume*price";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3533,6 +3594,22 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal sum_price {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableresource.sum_priceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'sum_price\' в таблице \'resource\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableresource.sum_priceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public stockRow stockRow {
                 get {
                     return ((stockRow)(this.GetParentRow(this.Table.ParentRelations["FK_resource_stock"])));
@@ -3540,6 +3617,18 @@ namespace Production_of_goods {
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_resource_stock"]);
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Issum_priceNull() {
+                return this.IsNull(this.tableresource.sum_priceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setsum_priceNull() {
+                this[this.tableresource.sum_priceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6062,7 +6151,7 @@ SELECT id_resourse, id_stock, volume, price, resource_name FROM resource WHERE (
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual production_of_goodsDataSet.resourceDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            production_of_goodsDataSet.resourceDataTable dataTable = new production_of_goodsDataSet.resourceDataTable();
+            production_of_goodsDataSet.resourceDataTable dataTable = new production_of_goodsDataSet.resourceDataTable(true);
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

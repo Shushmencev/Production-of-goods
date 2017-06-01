@@ -1,6 +1,6 @@
 ﻿namespace Production_of_goods
 {
-    partial class FormResourceTable
+    partial class FormStocks
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormResourceTable));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStocks));
             this.production_of_goodsDataSet = new Production_of_goods.production_of_goodsDataSet();
-            this.resourceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.resourceTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.resourceTableAdapter();
+            this.stockBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.stockTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.stockTableAdapter();
             this.tableAdapterManager = new Production_of_goods.production_of_goodsDataSetTableAdapters.TableAdapterManager();
-            this.resourceBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.stockBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
@@ -46,19 +46,16 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.resourceBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.resourceDataGridView = new System.Windows.Forms.DataGridView();
+            this.stockBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.stockDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sum_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.production_of_goodsDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resourceBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resourceBindingNavigator)).BeginInit();
-            this.resourceBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.resourceDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockBindingNavigator)).BeginInit();
+            this.stockBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.stockDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // production_of_goodsDataSet
@@ -66,14 +63,14 @@
             this.production_of_goodsDataSet.DataSetName = "production_of_goodsDataSet";
             this.production_of_goodsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // resourceBindingSource
+            // stockBindingSource
             // 
-            this.resourceBindingSource.DataMember = "resource";
-            this.resourceBindingSource.DataSource = this.production_of_goodsDataSet;
+            this.stockBindingSource.DataMember = "stock";
+            this.stockBindingSource.DataSource = this.production_of_goodsDataSet;
             // 
-            // resourceTableAdapter
+            // stockTableAdapter
             // 
-            this.resourceTableAdapter.ClearBeforeFill = true;
+            this.stockTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -84,17 +81,17 @@
             this.tableAdapterManager.goodsTableAdapter = null;
             this.tableAdapterManager.manufacturerTableAdapter = null;
             this.tableAdapterManager.orderTableAdapter = null;
-            this.tableAdapterManager.resourceTableAdapter = this.resourceTableAdapter;
-            this.tableAdapterManager.stockTableAdapter = null;
+            this.tableAdapterManager.resourceTableAdapter = null;
+            this.tableAdapterManager.stockTableAdapter = this.stockTableAdapter;
             this.tableAdapterManager.UpdateOrder = Production_of_goods.production_of_goodsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // resourceBindingNavigator
+            // stockBindingNavigator
             // 
-            this.resourceBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.resourceBindingNavigator.BindingSource = this.resourceBindingSource;
-            this.resourceBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.resourceBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.resourceBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stockBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.stockBindingNavigator.BindingSource = this.stockBindingSource;
+            this.stockBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.stockBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.stockBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -106,17 +103,18 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.resourceBindingNavigatorSaveItem});
-            this.resourceBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.resourceBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.resourceBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.resourceBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.resourceBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.resourceBindingNavigator.Name = "resourceBindingNavigator";
-            this.resourceBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.resourceBindingNavigator.Size = new System.Drawing.Size(643, 25);
-            this.resourceBindingNavigator.TabIndex = 0;
-            this.resourceBindingNavigator.Text = "bindingNavigator1";
+            this.stockBindingNavigatorSaveItem,
+            this.toolStripButton1});
+            this.stockBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.stockBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.stockBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.stockBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.stockBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.stockBindingNavigator.Name = "stockBindingNavigator";
+            this.stockBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.stockBindingNavigator.Size = new System.Drawing.Size(638, 25);
+            this.stockBindingNavigator.TabIndex = 0;
+            this.stockBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -203,87 +201,71 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // resourceBindingNavigatorSaveItem
+            // stockBindingNavigatorSaveItem
             // 
-            this.resourceBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.resourceBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("resourceBindingNavigatorSaveItem.Image")));
-            this.resourceBindingNavigatorSaveItem.Name = "resourceBindingNavigatorSaveItem";
-            this.resourceBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.resourceBindingNavigatorSaveItem.Text = "Сохранить данные";
-            this.resourceBindingNavigatorSaveItem.Click += new System.EventHandler(this.resourceBindingNavigatorSaveItem_Click);
+            this.stockBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.stockBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("stockBindingNavigatorSaveItem.Image")));
+            this.stockBindingNavigatorSaveItem.Name = "stockBindingNavigatorSaveItem";
+            this.stockBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.stockBindingNavigatorSaveItem.Text = "Сохранить данные";
+            this.stockBindingNavigatorSaveItem.Click += new System.EventHandler(this.stockBindingNavigatorSaveItem_Click);
             // 
-            // resourceDataGridView
+            // toolStripButton1
             // 
-            this.resourceDataGridView.AllowUserToOrderColumns = true;
-            this.resourceDataGridView.AutoGenerateColumns = false;
-            this.resourceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.resourceDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "Выбрать";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // stockDataGridView
+            // 
+            this.stockDataGridView.AutoGenerateColumns = false;
+            this.stockDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.stockDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.sum_price});
-            this.resourceDataGridView.DataSource = this.resourceBindingSource;
-            this.resourceDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.resourceDataGridView.Location = new System.Drawing.Point(0, 25);
-            this.resourceDataGridView.Name = "resourceDataGridView";
-            this.resourceDataGridView.Size = new System.Drawing.Size(643, 327);
-            this.resourceDataGridView.TabIndex = 1;
+            this.dataGridViewTextBoxColumn2});
+            this.stockDataGridView.DataSource = this.stockBindingSource;
+            this.stockDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stockDataGridView.Location = new System.Drawing.Point(0, 25);
+            this.stockDataGridView.Name = "stockDataGridView";
+            this.stockDataGridView.Size = new System.Drawing.Size(638, 214);
+            this.stockDataGridView.TabIndex = 1;
+            this.stockDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stockDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_resourse";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id_resourse";
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_stock";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id_stock";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "id_stock";
-            this.dataGridViewTextBoxColumn2.HeaderText = "id_stock";
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "adress";
+            this.dataGridViewTextBoxColumn2.HeaderText = "adress";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "volume";
-            this.dataGridViewTextBoxColumn3.HeaderText = "volume";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "price";
-            this.dataGridViewTextBoxColumn4.HeaderText = "price";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "resource_name";
-            this.dataGridViewTextBoxColumn5.HeaderText = "resource_name";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // sum_price
-            // 
-            this.sum_price.DataPropertyName = "sum_price";
-            this.sum_price.HeaderText = "sum_price";
-            this.sum_price.Name = "sum_price";
-            this.sum_price.ReadOnly = true;
-            // 
-            // FormResourceTable
+            // FormStocks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 352);
-            this.Controls.Add(this.resourceDataGridView);
-            this.Controls.Add(this.resourceBindingNavigator);
-            this.Name = "FormResourceTable";
-            this.Text = "Список ресурсов";
-            this.Load += new System.EventHandler(this.FormResourceTable_Load);
+            this.ClientSize = new System.Drawing.Size(638, 239);
+            this.Controls.Add(this.stockDataGridView);
+            this.Controls.Add(this.stockBindingNavigator);
+            this.Name = "FormStocks";
+            this.Text = "FormStocks";
+            this.Load += new System.EventHandler(this.FormStocks_Load);
+            this.Shown += new System.EventHandler(this.FormStocks_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.production_of_goodsDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resourceBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resourceBindingNavigator)).EndInit();
-            this.resourceBindingNavigator.ResumeLayout(false);
-            this.resourceBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.resourceDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockBindingNavigator)).EndInit();
+            this.stockBindingNavigator.ResumeLayout(false);
+            this.stockBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.stockDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,10 +274,10 @@
         #endregion
 
         private production_of_goodsDataSet production_of_goodsDataSet;
-        private System.Windows.Forms.BindingSource resourceBindingSource;
-        private production_of_goodsDataSetTableAdapters.resourceTableAdapter resourceTableAdapter;
+        private System.Windows.Forms.BindingSource stockBindingSource;
+        private production_of_goodsDataSetTableAdapters.stockTableAdapter stockTableAdapter;
         private production_of_goodsDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator resourceBindingNavigator;
+        private System.Windows.Forms.BindingNavigator stockBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -307,13 +289,10 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton resourceBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView resourceDataGridView;
+        private System.Windows.Forms.ToolStripButton stockBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView stockDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sum_price;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
