@@ -11,6 +11,10 @@ namespace Production_of_goods
 
     public partial class production_of_goodsDataSet
     {
+        partial class orderDataTable
+        {
+        }
+
         partial class customerDataTable
         {
         }

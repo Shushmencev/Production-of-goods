@@ -65,5 +65,15 @@ namespace Production_of_goods
         {
             dataGridViewSelect.DataSource = FillDataGridView("SELECT * FROM customer");
         }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBoxCustomerOrder_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
