@@ -75,5 +75,103 @@ namespace Production_of_goods
         {
 
         }
+
+        private void buttonF_Select_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(textBoxCustomer.Text))
+            {
+                MessageBox.Show("Укажите имя заказчика", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (checkBoxMore.Checked && String.IsNullOrEmpty(textBoxMore.Text))
+            {
+                MessageBox.Show(
+                    "Не указана прибыль в условии", "Внимание",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning
+                );
+                checkBoxMore.Checked = false;
+                return;
+            }
+
+            string sqlSelect = "";
+            if (radioButtonDet_Cat.Checked)
+            {
+                sqlSelect = @"SELECT g.goods_name, g.category, c.organization_name, o.data_time, o.sum  
+                CAST (Sum(o.sum) AS deciminal(16, 2)) AS Сумма
+                FROM order o, customer c, goods g
+                WHERE g.goods_id = o.goods_id AND o.id_customer = c.id_customer
+                GROUP BY g.category";
+            }
+            else
+            {
+                if (radioButtonDet_Name.Checked)
+                {
+                    sqlSelect = @"SELECT g.goods_name, g.category, c.organization_name, o.data_time, o.sum  
+                CAST (Sum(o.sum) AS deciminal(16, 2)) AS Сумма
+                FROM order o, customer c, goods g
+                WHERE g.goods_id = o.goods_id AND o.id_customer = c.id_customer
+                GROUP BY g.goods_name";
+                }
+
+                else
+                {
+                    sqlSelect = @"SELECT g.goods_name, g.category, c.organization_name, o.data_time, o.sum  
+                CAST (Sum(o.sum) AS deciminal(16, 2)) AS Сумма
+                FROM order o, customer c, goods g
+                WHERE g.goods_id = o.goods_id AND o.id_customer = c.id_customer
+                GROUP BY g.category";
+                }
+            }
+
+            if (checkBoxMore.Checked)
+            {
+                sqlSelect += " HAVING Sum(o.sum) > @amount";
+            }
+
+            if (checkBoxSum.Checked)
+            {
+                sqlSelect += " ORDER BY Sum(o.sum) desc";
+            }
+
+            SqlConnection connection = new SqlConnection(
+                Properties.Settings.Default.production_of_goodsConnectionString
+                );
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = sqlSelect;
+            command.Parameters.AddWithValue("@last_name", textBoxCustomer.Text + "%");
+
+            if (checkBoxMore.Checked)
+            {
+                try
+                {
+                    command.Parameters.Add("@amount", SqlDbType.Money).Value = Double.Parse(textBoxMore.Text);
+                }
+
+                catch
+                {
+                    MessageBox.Show(
+                        "Прибыль в условии должна быть задана числом", "Ошибка",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error
+                        );
+                    checkBoxMore.Checked = false;
+                    return;
+                }
+            }
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.SelectCommand = command;
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            dataGridViewFSelect.DataSource = table;
+
+            if (table.Rows.Count == 0)
+            {
+                MessageBox.Show(
+                    "Нет значений!", "Информация",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information
+                    );
+            }
+        }
     }
 }

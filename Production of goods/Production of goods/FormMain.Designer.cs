@@ -39,6 +39,7 @@
             this.товарыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ресурсыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ресурсыНаСкладахToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.прочееToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStripMain = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.файлToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -249,7 +250,7 @@
             this.resourceTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.resourceTableAdapter();
             this.stockTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.stockTableAdapter();
             this.goods_manufacturerTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.goods_manufacturerTableAdapter();
-            this.прочееToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStripMain.SuspendLayout();
             this.contextMenuStripMain.SuspendLayout();
             this.toolStripMain.SuspendLayout();
@@ -383,6 +384,13 @@
             this.ресурсыНаСкладахToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.ресурсыНаСкладахToolStripMenuItem.Text = "Ресурсы на складах";
             this.ресурсыНаСкладахToolStripMenuItem.Click += new System.EventHandler(this.ресурсыНаСкладахToolStripMenuItem_Click);
+            // 
+            // прочееToolStripMenuItem
+            // 
+            this.прочееToolStripMenuItem.Name = "прочееToolStripMenuItem";
+            this.прочееToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.прочееToolStripMenuItem.Text = "Прочее";
+            this.прочееToolStripMenuItem.Click += new System.EventHandler(this.прочееToolStripMenuItem_Click);
             // 
             // contextMenuStripMain
             // 
@@ -1406,7 +1414,8 @@
             this.dataGridViewTextBoxColumn30,
             this.dataGridViewTextBoxColumn32,
             this.dataGridViewTextBoxColumn33,
-            this.contacts});
+            this.contacts,
+            this.sum});
             this.orderDataGridView1.DataSource = this.orderBindingSource;
             this.orderDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.orderDataGridView1.Location = new System.Drawing.Point(3, 41);
@@ -2222,12 +2231,11 @@
             // 
             this.goods_manufacturerTableAdapter.ClearBeforeFill = true;
             // 
-            // прочееToolStripMenuItem
+            // sum
             // 
-            this.прочееToolStripMenuItem.Name = "прочееToolStripMenuItem";
-            this.прочееToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
-            this.прочееToolStripMenuItem.Text = "Прочее";
-            this.прочееToolStripMenuItem.Click += new System.EventHandler(this.прочееToolStripMenuItem_Click);
+            this.sum.DataPropertyName = "sum";
+            this.sum.HeaderText = "sum";
+            this.sum.Name = "sum";
             // 
             // FormMain
             // 
@@ -2535,6 +2543,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
         private System.Windows.Forms.ToolStripMenuItem прочееToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sum;
     }
 }
 

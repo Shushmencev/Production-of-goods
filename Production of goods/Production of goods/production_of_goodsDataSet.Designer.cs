@@ -2140,6 +2140,8 @@ namespace Production_of_goods {
             
             private global::System.Data.DataColumn columncontacts;
             
+            private global::System.Data.DataColumn columnsum;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public orderDataTable() : 
@@ -2224,6 +2226,14 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn sumColumn {
+                get {
+                    return this.columnsum;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2259,14 +2269,15 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public orderRow AddorderRow(customerRow parentcustomerRowByFK_order_customer, goodsRow parentgoodsRowByFK_order_goods, System.DateTime data_time, string contacts) {
+            public orderRow AddorderRow(customerRow parentcustomerRowByFK_order_customer, goodsRow parentgoodsRowByFK_order_goods, System.DateTime data_time, string contacts, decimal sum) {
                 orderRow roworderRow = ((orderRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         null,
                         data_time,
-                        contacts};
+                        contacts,
+                        sum};
                 if ((parentcustomerRowByFK_order_customer != null)) {
                     columnValuesArray[1] = parentcustomerRowByFK_order_customer[0];
                 }
@@ -2280,14 +2291,15 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public orderRow AddorderRow(customerRow parentcustomerRowByFK_order_customer, goodsRow parentgoodsRowByFK_order_goods, System.DateTime data_time) {
+            public orderRow AddorderRow(customerRow parentcustomerRowByFK_order_customer, goodsRow parentgoodsRowByFK_order_goods, System.DateTime data_time, decimal sum) {
                 orderRow roworderRow = ((orderRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         null,
                         data_time,
-                        null};
+                        null,
+                        sum};
                 if ((parentcustomerRowByFK_order_customer != null)) {
                     columnValuesArray[1] = parentcustomerRowByFK_order_customer[0];
                 }
@@ -2328,6 +2340,7 @@ namespace Production_of_goods {
                 this.columnid_goods = base.Columns["id_goods"];
                 this.columndata_time = base.Columns["data_time"];
                 this.columncontacts = base.Columns["contacts"];
+                this.columnsum = base.Columns["sum"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2343,6 +2356,8 @@ namespace Production_of_goods {
                 base.Columns.Add(this.columndata_time);
                 this.columncontacts = new global::System.Data.DataColumn("contacts", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncontacts);
+                this.columnsum = new global::System.Data.DataColumn("sum", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsum);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_order}, true));
                 this.columnid_order.AutoIncrement = true;
@@ -3645,6 +3660,22 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal sum {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableorder.sumColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'sum\' в таблице \'order\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableorder.sumColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public customerRow customerRow {
                 get {
                     return ((customerRow)(this.GetParentRow(this.Table.ParentRelations["FK_order_customer"])));
@@ -3675,6 +3706,18 @@ namespace Production_of_goods {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetcontactsNull() {
                 this[this.tableorder.contactsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IssumNull() {
+                return this.IsNull(this.tableorder.sumColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetsumNull() {
+                this[this.tableorder.sumColumn] = global::System.Convert.DBNull;
             }
         }
         
