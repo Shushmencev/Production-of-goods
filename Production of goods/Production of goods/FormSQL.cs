@@ -97,41 +97,41 @@ namespace Production_of_goods
             string sqlSelect = "";
             if (radioButtonDet_Cat.Checked)
             {
-                sqlSelect = @"SELECT g.goods_name, g.category, c.organization_name, o.data_time, o.sum  
-                CAST (Sum(o.sum) AS deciminal(16, 2)) AS Сумма
+                sqlSelect = @"SELECT g.goods_name, category, c.organization_name, o.data_time,  
+                CAST (Sum(data_time) AS decimal(16, 2)) AS Сумма
                 FROM order o, customer c, goods g
                 WHERE g.goods_id = o.goods_id AND o.id_customer = c.id_customer
-                GROUP BY g.category";
+                GROUP BY g.goods_name";
             }
             else
             {
                 if (radioButtonDet_Name.Checked)
                 {
-                    sqlSelect = @"SELECT g.goods_name, g.category, c.organization_name, o.data_time, o.sum  
-                CAST (Sum(o.sum) AS deciminal(16, 2)) AS Сумма
-                FROM order o, customer c, goods g
-                WHERE g.goods_id = o.goods_id AND o.id_customer = c.id_customer
-                GROUP BY g.goods_name";
+                //    sqlSelect = @"SELECT g.goods_name, g.category, c.organization_name, o.data_time 
+                //CAST (Sum(o.data_time) AS deciminal(16, 2)) AS Сумма
+                //FROM order o, customer c, goods g
+                //WHERE g.goods_id = o.goods_id AND o.id_customer = c.id_customer
+                //GROUP BY g.goods_name";
                 }
 
                 else
                 {
-                    sqlSelect = @"SELECT g.goods_name, g.category, c.organization_name, o.data_time, o.sum  
-                CAST (Sum(o.sum) AS deciminal(16, 2)) AS Сумма
-                FROM order o, customer c, goods g
-                WHERE g.goods_id = o.goods_id AND o.id_customer = c.id_customer
-                GROUP BY g.category";
+                //    sqlSelect = @"SELECT g.goods_name, g.category, c.organization_name, o.data_time 
+                //CAST (Sum(o.data_time) AS deciminal(16, 2)) AS Сумма
+                //FROM order o, customer c, goods g
+                //WHERE g.goods_id = o.goods_id AND o.id_customer = c.id_customer
+                //GROUP BY g.goods_name";
                 }
             }
 
             if (checkBoxMore.Checked)
             {
-                sqlSelect += " HAVING Sum(o.sum) > @amount";
+                //sqlSelect += " HAVING Sum(o.data_time) > @amount";
             }
 
             if (checkBoxSum.Checked)
             {
-                sqlSelect += " ORDER BY Sum(o.sum) desc";
+                //sqlSelect += " ORDER BY Sum(o.data_time) desc";
             }
 
             SqlConnection connection = new SqlConnection(

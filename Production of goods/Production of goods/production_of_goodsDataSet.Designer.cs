@@ -961,10 +961,6 @@ namespace Production_of_goods {
             
             private global::System.Data.DataColumn columngoods_name;
             
-            private global::System.Data.DataColumn columncategory;
-            
-            private global::System.Data.DataColumn columnphoto;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public goodsDataTable() {
@@ -1016,22 +1012,6 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn categoryColumn {
-                get {
-                    return this.columncategory;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn photoColumn {
-                get {
-                    return this.columnphoto;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1067,13 +1047,11 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public goodsRow AddgoodsRow(string goods_name, string category, byte[] photo) {
+            public goodsRow AddgoodsRow(string goods_name) {
                 goodsRow rowgoodsRow = ((goodsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        goods_name,
-                        category,
-                        photo};
+                        goods_name};
                 rowgoodsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowgoodsRow);
                 return rowgoodsRow;
@@ -1105,8 +1083,6 @@ namespace Production_of_goods {
             internal void InitVars() {
                 this.columnid_goods = base.Columns["id_goods"];
                 this.columngoods_name = base.Columns["goods_name"];
-                this.columncategory = base.Columns["category"];
-                this.columnphoto = base.Columns["photo"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1116,10 +1092,6 @@ namespace Production_of_goods {
                 base.Columns.Add(this.columnid_goods);
                 this.columngoods_name = new global::System.Data.DataColumn("goods_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columngoods_name);
-                this.columncategory = new global::System.Data.DataColumn("category", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncategory);
-                this.columnphoto = new global::System.Data.DataColumn("photo", typeof(byte[]), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnphoto);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_goods}, true));
                 this.columnid_goods.AutoIncrement = true;
@@ -2140,8 +2112,6 @@ namespace Production_of_goods {
             
             private global::System.Data.DataColumn columncontacts;
             
-            private global::System.Data.DataColumn columnsum;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public orderDataTable() : 
@@ -2226,14 +2196,6 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn sumColumn {
-                get {
-                    return this.columnsum;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2269,15 +2231,14 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public orderRow AddorderRow(customerRow parentcustomerRowByFK_order_customer, goodsRow parentgoodsRowByFK_order_goods, System.DateTime data_time, string contacts, decimal sum) {
+            public orderRow AddorderRow(customerRow parentcustomerRowByFK_order_customer, goodsRow parentgoodsRowByFK_order_goods, System.DateTime data_time, string contacts) {
                 orderRow roworderRow = ((orderRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         null,
                         data_time,
-                        contacts,
-                        sum};
+                        contacts};
                 if ((parentcustomerRowByFK_order_customer != null)) {
                     columnValuesArray[1] = parentcustomerRowByFK_order_customer[0];
                 }
@@ -2291,15 +2252,14 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public orderRow AddorderRow(customerRow parentcustomerRowByFK_order_customer, goodsRow parentgoodsRowByFK_order_goods, System.DateTime data_time, decimal sum) {
+            public orderRow AddorderRow(customerRow parentcustomerRowByFK_order_customer, goodsRow parentgoodsRowByFK_order_goods, System.DateTime data_time) {
                 orderRow roworderRow = ((orderRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         null,
                         data_time,
-                        null,
-                        sum};
+                        null};
                 if ((parentcustomerRowByFK_order_customer != null)) {
                     columnValuesArray[1] = parentcustomerRowByFK_order_customer[0];
                 }
@@ -2340,7 +2300,6 @@ namespace Production_of_goods {
                 this.columnid_goods = base.Columns["id_goods"];
                 this.columndata_time = base.Columns["data_time"];
                 this.columncontacts = base.Columns["contacts"];
-                this.columnsum = base.Columns["sum"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2356,8 +2315,6 @@ namespace Production_of_goods {
                 base.Columns.Add(this.columndata_time);
                 this.columncontacts = new global::System.Data.DataColumn("contacts", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncontacts);
-                this.columnsum = new global::System.Data.DataColumn("sum", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsum);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_order}, true));
                 this.columnid_order.AutoIncrement = true;
@@ -3297,62 +3254,6 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string category {
-                get {
-                    try {
-                        return ((string)(this[this.tablegoods.categoryColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'category\' в таблице \'goods\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablegoods.categoryColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte[] photo {
-                get {
-                    try {
-                        return ((byte[])(this[this.tablegoods.photoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'photo\' в таблице \'goods\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablegoods.photoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IscategoryNull() {
-                return this.IsNull(this.tablegoods.categoryColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetcategoryNull() {
-                this[this.tablegoods.categoryColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsphotoNull() {
-                return this.IsNull(this.tablegoods.photoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetphotoNull() {
-                this[this.tablegoods.photoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public goods_manufacturerRow[] Getgoods_manufacturerRows() {
                 if ((this.Table.ChildRelations["FK_goods_manufacturer_goods"] == null)) {
                     return new goods_manufacturerRow[0];
@@ -3660,22 +3561,6 @@ namespace Production_of_goods {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal sum {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableorder.sumColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'sum\' в таблице \'order\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableorder.sumColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public customerRow customerRow {
                 get {
                     return ((customerRow)(this.GetParentRow(this.Table.ParentRelations["FK_order_customer"])));
@@ -3706,18 +3591,6 @@ namespace Production_of_goods {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetcontactsNull() {
                 this[this.tableorder.contactsColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IssumNull() {
-                return this.IsNull(this.tableorder.sumColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetsumNull() {
-                this[this.tableorder.sumColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4737,7 +4610,7 @@ SELECT id_customer, organization_name, e_mail, phone_number, address FROM custom
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id_goods, goods_name FROM dbo.goods";
+            this._commandCollection[0].CommandText = "SELECT id_goods, goods_name FROM goods";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5957,9 +5830,9 @@ SELECT id_manufacturer, organization_name, e_mail, phone_number, address FROM ma
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[order] WHERE (([id_order] = @Original_id_order) AND ([id_custo" +
-                "mer] = @Original_id_customer) AND ([id_goods] = @Original_id_goods) AND ([data_t" +
-                "ime] = @Original_data_time))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [order] WHERE (([id_order] = @Original_id_order) AND ([id_customer] =" +
+                " @Original_id_customer) AND ([id_goods] = @Original_id_goods) AND ([data_time] =" +
+                " @Original_data_time))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_order", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_order", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_customer", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_customer", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5967,9 +5840,9 @@ SELECT id_manufacturer, organization_name, e_mail, phone_number, address FROM ma
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_data_time", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_time", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[order] ([id_order], [id_customer], [id_goods], [data_time]) VA" +
-                "LUES (@id_order, @id_customer, @id_goods, @data_time);\r\nSELECT id_order, id_cust" +
-                "omer, id_goods, data_time FROM [order] WHERE (id_order = @id_order)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [order] ([id_order], [id_customer], [id_goods], [data_time]) VALUES (" +
+                "@id_order, @id_customer, @id_goods, @data_time);\r\nSELECT id_order, id_customer, " +
+                "id_goods, data_time FROM [order] WHERE (id_order = @id_order)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_order", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_order", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_customer", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_customer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5977,7 +5850,7 @@ SELECT id_manufacturer, organization_name, e_mail, phone_number, address FROM ma
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_time", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[order] SET [id_order] = @id_order, [id_customer] = @id_customer, [id_goods] = @id_goods, [data_time] = @data_time WHERE (([id_order] = @Original_id_order) AND ([id_customer] = @Original_id_customer) AND ([id_goods] = @Original_id_goods) AND ([data_time] = @Original_data_time));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [order] SET [id_order] = @id_order, [id_customer] = @id_customer, [id_goods] = @id_goods, [data_time] = @data_time WHERE (([id_order] = @Original_id_order) AND ([id_customer] = @Original_id_customer) AND ([id_goods] = @Original_id_goods) AND ([data_time] = @Original_data_time));
 SELECT id_order, id_customer, id_goods, data_time FROM [order] WHERE (id_order = @id_order)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_order", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_order", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6003,7 +5876,7 @@ SELECT id_order, id_customer, id_goods, data_time FROM [order] WHERE (id_order =
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id_order, id_customer, id_goods, data_time FROM dbo.[order]";
+            this._commandCollection[0].CommandText = "SELECT id_order, id_customer, id_goods, data_time FROM [order]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

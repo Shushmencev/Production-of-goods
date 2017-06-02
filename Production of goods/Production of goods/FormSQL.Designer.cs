@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControlSQL = new System.Windows.Forms.TabControl();
             this.tabPfge1 = new System.Windows.Forms.TabPage();
             this.dataGridViewSelect = new System.Windows.Forms.DataGridView();
@@ -36,26 +37,32 @@
             this.radioButtonManufacturers = new System.Windows.Forms.RadioButton();
             this.radioButtonResources = new System.Windows.Forms.RadioButton();
             this.tabPageSelect = new System.Windows.Forms.TabPage();
-            this.groupBoxCustomerOrder = new System.Windows.Forms.GroupBox();
-            this.labelCustomer = new System.Windows.Forms.Label();
-            this.textBoxCustomer = new System.Windows.Forms.TextBox();
-            this.groupBoxDet = new System.Windows.Forms.GroupBox();
-            this.radioButtonDet_Cat = new System.Windows.Forms.RadioButton();
-            this.radioButtonDet_Name = new System.Windows.Forms.RadioButton();
-            this.radioButtonDet_NO = new System.Windows.Forms.RadioButton();
             this.dataGridViewFSelect = new System.Windows.Forms.DataGridView();
-            this.checkBoxMore = new System.Windows.Forms.CheckBox();
-            this.textBoxMore = new System.Windows.Forms.TextBox();
+            this.groupBoxDet = new System.Windows.Forms.GroupBox();
             this.checkBoxSum = new System.Windows.Forms.CheckBox();
+            this.textBoxMore = new System.Windows.Forms.TextBox();
+            this.checkBoxMore = new System.Windows.Forms.CheckBox();
+            this.radioButtonDet_NO = new System.Windows.Forms.RadioButton();
+            this.radioButtonDet_Name = new System.Windows.Forms.RadioButton();
+            this.radioButtonDet_Cat = new System.Windows.Forms.RadioButton();
+            this.groupBoxCustomerOrder = new System.Windows.Forms.GroupBox();
             this.buttonF_Select = new System.Windows.Forms.Button();
+            this.textBoxCustomer = new System.Windows.Forms.TextBox();
+            this.labelCustomer = new System.Windows.Forms.Label();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.production_of_goodsDataSet = new Production_of_goods.production_of_goodsDataSet();
             this.tabControlSQL.SuspendLayout();
             this.tabPfge1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSelect)).BeginInit();
             this.groupBoxSelect.SuspendLayout();
             this.tabPageSelect.SuspendLayout();
-            this.groupBoxCustomerOrder.SuspendLayout();
-            this.groupBoxDet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFSelect)).BeginInit();
+            this.groupBoxDet.SuspendLayout();
+            this.groupBoxCustomerOrder.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.production_of_goodsDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlSQL
@@ -152,34 +159,14 @@
             this.tabPageSelect.Text = "Полная запись SELECT";
             this.tabPageSelect.UseVisualStyleBackColor = true;
             // 
-            // groupBoxCustomerOrder
+            // dataGridViewFSelect
             // 
-            this.groupBoxCustomerOrder.Controls.Add(this.buttonF_Select);
-            this.groupBoxCustomerOrder.Controls.Add(this.textBoxCustomer);
-            this.groupBoxCustomerOrder.Controls.Add(this.labelCustomer);
-            this.groupBoxCustomerOrder.Location = new System.Drawing.Point(3, 6);
-            this.groupBoxCustomerOrder.Name = "groupBoxCustomerOrder";
-            this.groupBoxCustomerOrder.Size = new System.Drawing.Size(227, 152);
-            this.groupBoxCustomerOrder.TabIndex = 0;
-            this.groupBoxCustomerOrder.TabStop = false;
-            this.groupBoxCustomerOrder.Text = "Заказы клиента";
-            this.groupBoxCustomerOrder.Enter += new System.EventHandler(this.groupBoxCustomerOrder_Enter);
-            // 
-            // labelCustomer
-            // 
-            this.labelCustomer.AutoSize = true;
-            this.labelCustomer.Location = new System.Drawing.Point(6, 22);
-            this.labelCustomer.Name = "labelCustomer";
-            this.labelCustomer.Size = new System.Drawing.Size(85, 13);
-            this.labelCustomer.TabIndex = 0;
-            this.labelCustomer.Text = "Имя заказчика";
-            // 
-            // textBoxCustomer
-            // 
-            this.textBoxCustomer.Location = new System.Drawing.Point(8, 40);
-            this.textBoxCustomer.Name = "textBoxCustomer";
-            this.textBoxCustomer.Size = new System.Drawing.Size(213, 20);
-            this.textBoxCustomer.TabIndex = 1;
+            this.dataGridViewFSelect.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFSelect.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridViewFSelect.Location = new System.Drawing.Point(3, 164);
+            this.dataGridViewFSelect.Name = "dataGridViewFSelect";
+            this.dataGridViewFSelect.Size = new System.Drawing.Size(599, 282);
+            this.dataGridViewFSelect.TabIndex = 2;
             // 
             // groupBoxDet
             // 
@@ -196,27 +183,32 @@
             this.groupBoxDet.TabStop = false;
             this.groupBoxDet.Text = "Детализация заказов";
             // 
-            // radioButtonDet_Cat
+            // checkBoxSum
             // 
-            this.radioButtonDet_Cat.AutoSize = true;
-            this.radioButtonDet_Cat.Location = new System.Drawing.Point(8, 20);
-            this.radioButtonDet_Cat.Name = "radioButtonDet_Cat";
-            this.radioButtonDet_Cat.Size = new System.Drawing.Size(182, 17);
-            this.radioButtonDet_Cat.TabIndex = 0;
-            this.radioButtonDet_Cat.TabStop = true;
-            this.radioButtonDet_Cat.Text = "Сумма заказов по категориям";
-            this.radioButtonDet_Cat.UseVisualStyleBackColor = true;
+            this.checkBoxSum.AutoSize = true;
+            this.checkBoxSum.Location = new System.Drawing.Point(8, 129);
+            this.checkBoxSum.Name = "checkBoxSum";
+            this.checkBoxSum.Size = new System.Drawing.Size(252, 17);
+            this.checkBoxSum.TabIndex = 5;
+            this.checkBoxSum.Text = "Включить сортировку по убыванию прибыли";
+            this.checkBoxSum.UseVisualStyleBackColor = true;
             // 
-            // radioButtonDet_Name
+            // textBoxMore
             // 
-            this.radioButtonDet_Name.AutoSize = true;
-            this.radioButtonDet_Name.Location = new System.Drawing.Point(8, 43);
-            this.radioButtonDet_Name.Name = "radioButtonDet_Name";
-            this.radioButtonDet_Name.Size = new System.Drawing.Size(192, 17);
-            this.radioButtonDet_Name.TabIndex = 1;
-            this.radioButtonDet_Name.TabStop = true;
-            this.radioButtonDet_Name.Text = "Сумма заказов по имени товара";
-            this.radioButtonDet_Name.UseVisualStyleBackColor = true;
+            this.textBoxMore.Location = new System.Drawing.Point(155, 104);
+            this.textBoxMore.Name = "textBoxMore";
+            this.textBoxMore.Size = new System.Drawing.Size(205, 20);
+            this.textBoxMore.TabIndex = 4;
+            // 
+            // checkBoxMore
+            // 
+            this.checkBoxMore.AutoSize = true;
+            this.checkBoxMore.Location = new System.Drawing.Point(8, 106);
+            this.checkBoxMore.Name = "checkBoxMore";
+            this.checkBoxMore.Size = new System.Drawing.Size(141, 17);
+            this.checkBoxMore.TabIndex = 3;
+            this.checkBoxMore.Text = "Выбрать суммы более";
+            this.checkBoxMore.UseVisualStyleBackColor = true;
             // 
             // radioButtonDet_NO
             // 
@@ -230,41 +222,40 @@
             this.radioButtonDet_NO.UseVisualStyleBackColor = true;
             this.radioButtonDet_NO.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // dataGridViewFSelect
+            // radioButtonDet_Name
             // 
-            this.dataGridViewFSelect.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewFSelect.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridViewFSelect.Location = new System.Drawing.Point(3, 164);
-            this.dataGridViewFSelect.Name = "dataGridViewFSelect";
-            this.dataGridViewFSelect.Size = new System.Drawing.Size(599, 282);
-            this.dataGridViewFSelect.TabIndex = 2;
+            this.radioButtonDet_Name.AutoSize = true;
+            this.radioButtonDet_Name.Location = new System.Drawing.Point(8, 43);
+            this.radioButtonDet_Name.Name = "radioButtonDet_Name";
+            this.radioButtonDet_Name.Size = new System.Drawing.Size(192, 17);
+            this.radioButtonDet_Name.TabIndex = 1;
+            this.radioButtonDet_Name.TabStop = true;
+            this.radioButtonDet_Name.Text = "Сумма заказов по имени товара";
+            this.radioButtonDet_Name.UseVisualStyleBackColor = true;
             // 
-            // checkBoxMore
+            // radioButtonDet_Cat
             // 
-            this.checkBoxMore.AutoSize = true;
-            this.checkBoxMore.Location = new System.Drawing.Point(8, 106);
-            this.checkBoxMore.Name = "checkBoxMore";
-            this.checkBoxMore.Size = new System.Drawing.Size(141, 17);
-            this.checkBoxMore.TabIndex = 3;
-            this.checkBoxMore.Text = "Выбрать суммы более";
-            this.checkBoxMore.UseVisualStyleBackColor = true;
+            this.radioButtonDet_Cat.AutoSize = true;
+            this.radioButtonDet_Cat.Location = new System.Drawing.Point(8, 20);
+            this.radioButtonDet_Cat.Name = "radioButtonDet_Cat";
+            this.radioButtonDet_Cat.Size = new System.Drawing.Size(182, 17);
+            this.radioButtonDet_Cat.TabIndex = 0;
+            this.radioButtonDet_Cat.TabStop = true;
+            this.radioButtonDet_Cat.Text = "Сумма заказов по категориям";
+            this.radioButtonDet_Cat.UseVisualStyleBackColor = true;
             // 
-            // textBoxMore
+            // groupBoxCustomerOrder
             // 
-            this.textBoxMore.Location = new System.Drawing.Point(155, 104);
-            this.textBoxMore.Name = "textBoxMore";
-            this.textBoxMore.Size = new System.Drawing.Size(205, 20);
-            this.textBoxMore.TabIndex = 4;
-            // 
-            // checkBoxSum
-            // 
-            this.checkBoxSum.AutoSize = true;
-            this.checkBoxSum.Location = new System.Drawing.Point(8, 129);
-            this.checkBoxSum.Name = "checkBoxSum";
-            this.checkBoxSum.Size = new System.Drawing.Size(252, 17);
-            this.checkBoxSum.TabIndex = 5;
-            this.checkBoxSum.Text = "Включить сортировку по убыванию прибыли";
-            this.checkBoxSum.UseVisualStyleBackColor = true;
+            this.groupBoxCustomerOrder.Controls.Add(this.buttonF_Select);
+            this.groupBoxCustomerOrder.Controls.Add(this.textBoxCustomer);
+            this.groupBoxCustomerOrder.Controls.Add(this.labelCustomer);
+            this.groupBoxCustomerOrder.Location = new System.Drawing.Point(3, 6);
+            this.groupBoxCustomerOrder.Name = "groupBoxCustomerOrder";
+            this.groupBoxCustomerOrder.Size = new System.Drawing.Size(227, 152);
+            this.groupBoxCustomerOrder.TabIndex = 0;
+            this.groupBoxCustomerOrder.TabStop = false;
+            this.groupBoxCustomerOrder.Text = "Заказы клиента";
+            this.groupBoxCustomerOrder.Enter += new System.EventHandler(this.groupBoxCustomerOrder_Enter);
             // 
             // buttonF_Select
             // 
@@ -275,6 +266,32 @@
             this.buttonF_Select.Text = "Заказы клиента";
             this.buttonF_Select.UseVisualStyleBackColor = true;
             this.buttonF_Select.Click += new System.EventHandler(this.buttonF_Select_Click);
+            // 
+            // textBoxCustomer
+            // 
+            this.textBoxCustomer.Location = new System.Drawing.Point(8, 40);
+            this.textBoxCustomer.Name = "textBoxCustomer";
+            this.textBoxCustomer.Size = new System.Drawing.Size(213, 20);
+            this.textBoxCustomer.TabIndex = 1;
+            // 
+            // labelCustomer
+            // 
+            this.labelCustomer.AutoSize = true;
+            this.labelCustomer.Location = new System.Drawing.Point(6, 22);
+            this.labelCustomer.Name = "labelCustomer";
+            this.labelCustomer.Size = new System.Drawing.Size(85, 13);
+            this.labelCustomer.TabIndex = 0;
+            this.labelCustomer.Text = "Имя заказчика";
+            // 
+            // bindingSource2
+            // 
+            this.bindingSource2.DataSource = this.production_of_goodsDataSet;
+            this.bindingSource2.Position = 0;
+            // 
+            // production_of_goodsDataSet
+            // 
+            this.production_of_goodsDataSet.DataSetName = "production_of_goodsDataSet";
+            this.production_of_goodsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // FormSQL
             // 
@@ -290,11 +307,14 @@
             this.groupBoxSelect.ResumeLayout(false);
             this.groupBoxSelect.PerformLayout();
             this.tabPageSelect.ResumeLayout(false);
-            this.groupBoxCustomerOrder.ResumeLayout(false);
-            this.groupBoxCustomerOrder.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFSelect)).EndInit();
             this.groupBoxDet.ResumeLayout(false);
             this.groupBoxDet.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFSelect)).EndInit();
+            this.groupBoxCustomerOrder.ResumeLayout(false);
+            this.groupBoxCustomerOrder.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.production_of_goodsDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -321,5 +341,8 @@
         private System.Windows.Forms.CheckBox checkBoxSum;
         private System.Windows.Forms.TextBox textBoxMore;
         private System.Windows.Forms.Button buttonF_Select;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.BindingSource bindingSource2;
+        private production_of_goodsDataSet production_of_goodsDataSet;
     }
 }

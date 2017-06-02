@@ -57,17 +57,10 @@
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.goods_manufacturerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.manufacturerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.production_of_goodsDataSet = new Production_of_goods.production_of_goodsDataSet();
             this.resourceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.stockBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.goodsDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.goodsbindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton34 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
@@ -85,11 +78,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkBoxManufacturerFind = new System.Windows.Forms.CheckBox();
             this.manufacturerDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerbindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton27 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
@@ -110,12 +98,6 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.resourceDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.resourceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.resourceNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton48 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel7 = new System.Windows.Forms.ToolStripLabel();
@@ -132,8 +114,6 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.stockDataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stockNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton55 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel8 = new System.Windows.Forms.ToolStripLabel();
@@ -149,12 +129,6 @@
             this.toolStripButton61 = new System.Windows.Forms.ToolStripButton();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.orderDataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contacts = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.orderNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton62 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel9 = new System.Windows.Forms.ToolStripLabel();
@@ -172,12 +146,6 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.customerDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customerbindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -242,6 +210,33 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manufacturerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.production_of_goodsDataSet = new Production_of_goods.production_of_goodsDataSet();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resourceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stockBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.manufacturerTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.manufacturerTableAdapter();
             this.tableAdapterManager = new Production_of_goods.production_of_goodsDataSetTableAdapters.TableAdapterManager();
             this.customerTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.customerTableAdapter();
@@ -250,20 +245,28 @@
             this.resourceTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.resourceTableAdapter();
             this.stockTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.stockTableAdapter();
             this.goods_manufacturerTableAdapter = new Production_of_goods.production_of_goodsDataSetTableAdapters.goods_manufacturerTableAdapter();
-            this.sum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderDataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idorderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idcustomerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idgoodsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datatimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contactsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStripMain.SuspendLayout();
             this.contextMenuStripMain.SuspendLayout();
             this.toolStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goods_manufacturerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.manufacturerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.production_of_goodsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resourceBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.goodsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsbindingNavigator)).BeginInit();
             this.goodsbindingNavigator.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -275,7 +278,6 @@
             this.tabPage3.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.resourceDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resourceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resourceNavigator)).BeginInit();
             this.resourceNavigator.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -285,20 +287,25 @@
             this.stockNavigator.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.orderDataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderNavigator)).BeginInit();
             this.orderNavigator.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerbindingNavigator)).BeginInit();
             this.customerbindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderbindingNavigator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockbindingNavigator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manufacturerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.production_of_goodsDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resourceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStripMain
@@ -540,25 +547,10 @@
             this.goods_manufacturerBindingSource.DataMember = "FK_goods_manufacturer_manufacturer";
             this.goods_manufacturerBindingSource.DataSource = this.manufacturerBindingSource;
             // 
-            // manufacturerBindingSource
-            // 
-            this.manufacturerBindingSource.DataMember = "manufacturer";
-            this.manufacturerBindingSource.DataSource = this.production_of_goodsDataSet;
-            // 
-            // production_of_goodsDataSet
-            // 
-            this.production_of_goodsDataSet.DataSetName = "production_of_goodsDataSet";
-            this.production_of_goodsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // resourceBindingSource1
             // 
             this.resourceBindingSource1.DataMember = "FK_resource_stock";
             this.resourceBindingSource1.DataSource = this.stockBindingSource;
-            // 
-            // stockBindingSource
-            // 
-            this.stockBindingSource.DataMember = "stock";
-            this.stockBindingSource.DataSource = this.production_of_goodsDataSet;
             // 
             // tabPage2
             // 
@@ -601,29 +593,6 @@
             this.goodsDataGridView.Size = new System.Drawing.Size(543, 276);
             this.goodsDataGridView.TabIndex = 4;
             this.goodsDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.goodsDataGridView_DataError);
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "id_goods";
-            this.dataGridViewTextBoxColumn11.HeaderText = "id_goods";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "goods_name";
-            this.dataGridViewTextBoxColumn12.HeaderText = "goods_name";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "category";
-            this.dataGridViewTextBoxColumn13.HeaderText = "category";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // goodsBindingSource
-            // 
-            this.goodsBindingSource.DataMember = "goods";
-            this.goodsBindingSource.DataSource = this.production_of_goodsDataSet;
             // 
             // goodsbindingNavigator
             // 
@@ -805,36 +774,6 @@
             this.manufacturerDataGridView.TabIndex = 4;
             this.manufacturerDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.manufacturerDataGridView_CellContentClick);
             this.manufacturerDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.manufacturerDataGridView_DataError);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_manufacturer";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id_manufacturer";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "organization_name";
-            this.dataGridViewTextBoxColumn2.HeaderText = "organization_name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "e_mail";
-            this.dataGridViewTextBoxColumn3.HeaderText = "e_mail";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "phone_number";
-            this.dataGridViewTextBoxColumn4.HeaderText = "phone_number";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "address";
-            this.dataGridViewTextBoxColumn5.HeaderText = "address";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // manufacturerbindingNavigator
             // 
@@ -1046,41 +985,6 @@
             this.resourceDataGridView.TabIndex = 6;
             this.resourceDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.resourceDataGridView_DataError);
             // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.DataPropertyName = "id_resourse";
-            this.dataGridViewTextBoxColumn25.HeaderText = "id_resourse";
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.DataPropertyName = "id_stock";
-            this.dataGridViewTextBoxColumn26.HeaderText = "id_stock";
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            // 
-            // dataGridViewTextBoxColumn27
-            // 
-            this.dataGridViewTextBoxColumn27.DataPropertyName = "volume";
-            this.dataGridViewTextBoxColumn27.HeaderText = "volume";
-            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            // 
-            // dataGridViewTextBoxColumn28
-            // 
-            this.dataGridViewTextBoxColumn28.DataPropertyName = "price";
-            this.dataGridViewTextBoxColumn28.HeaderText = "price";
-            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
-            // 
-            // dataGridViewTextBoxColumn29
-            // 
-            this.dataGridViewTextBoxColumn29.DataPropertyName = "resource_name";
-            this.dataGridViewTextBoxColumn29.HeaderText = "resource_name";
-            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            // 
-            // resourceBindingSource
-            // 
-            this.resourceBindingSource.DataMember = "resource";
-            this.resourceBindingSource.DataSource = this.production_of_goodsDataSet;
-            // 
             // resourceNavigator
             // 
             this.resourceNavigator.AddNewItem = this.toolStripButton48;
@@ -1245,18 +1149,6 @@
             this.stockDataGridView1.TabIndex = 6;
             this.stockDataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.stockDataGridView1_DataError);
             // 
-            // dataGridViewTextBoxColumn34
-            // 
-            this.dataGridViewTextBoxColumn34.DataPropertyName = "id_stock";
-            this.dataGridViewTextBoxColumn34.HeaderText = "id_stock";
-            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
-            // 
-            // dataGridViewTextBoxColumn35
-            // 
-            this.dataGridViewTextBoxColumn35.DataPropertyName = "adress";
-            this.dataGridViewTextBoxColumn35.HeaderText = "adress";
-            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
-            // 
             // stockNavigator
             // 
             this.stockNavigator.AddNewItem = this.toolStripButton55;
@@ -1404,55 +1296,6 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Таблица";
             this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter_1);
-            // 
-            // orderDataGridView1
-            // 
-            this.orderDataGridView1.AllowUserToOrderColumns = true;
-            this.orderDataGridView1.AutoGenerateColumns = false;
-            this.orderDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.orderDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn30,
-            this.dataGridViewTextBoxColumn32,
-            this.dataGridViewTextBoxColumn33,
-            this.contacts,
-            this.sum});
-            this.orderDataGridView1.DataSource = this.orderBindingSource;
-            this.orderDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.orderDataGridView1.Location = new System.Drawing.Point(3, 41);
-            this.orderDataGridView1.Name = "orderDataGridView1";
-            this.orderDataGridView1.Size = new System.Drawing.Size(543, 276);
-            this.orderDataGridView1.TabIndex = 6;
-            this.orderDataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.orderDataGridView1_DataError);
-            // 
-            // dataGridViewTextBoxColumn30
-            // 
-            this.dataGridViewTextBoxColumn30.DataPropertyName = "id_order";
-            this.dataGridViewTextBoxColumn30.HeaderText = "id_order";
-            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
-            // 
-            // dataGridViewTextBoxColumn32
-            // 
-            this.dataGridViewTextBoxColumn32.DataPropertyName = "id_goods";
-            this.dataGridViewTextBoxColumn32.HeaderText = "id_goods";
-            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
-            // 
-            // dataGridViewTextBoxColumn33
-            // 
-            this.dataGridViewTextBoxColumn33.DataPropertyName = "data_time";
-            this.dataGridViewTextBoxColumn33.HeaderText = "data_time";
-            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
-            // 
-            // contacts
-            // 
-            this.contacts.DataPropertyName = "contacts";
-            this.contacts.HeaderText = "contacts";
-            this.contacts.Name = "contacts";
-            this.contacts.ReadOnly = true;
-            // 
-            // orderBindingSource
-            // 
-            this.orderBindingSource.DataMember = "order";
-            this.orderBindingSource.DataSource = this.production_of_goodsDataSet;
             // 
             // orderNavigator
             // 
@@ -1625,41 +1468,6 @@
             this.customerDataGridView.Size = new System.Drawing.Size(543, 276);
             this.customerDataGridView.TabIndex = 7;
             this.customerDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.customerDataGridView_DataError);
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "id_customer";
-            this.dataGridViewTextBoxColumn19.HeaderText = "id_customer";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "organization_name";
-            this.dataGridViewTextBoxColumn20.HeaderText = "organization_name";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "e_mail";
-            this.dataGridViewTextBoxColumn21.HeaderText = "e_mail";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "phone_number";
-            this.dataGridViewTextBoxColumn22.HeaderText = "phone_number";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "address";
-            this.dataGridViewTextBoxColumn23.HeaderText = "address";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataMember = "customer";
-            this.customerBindingSource.DataSource = this.production_of_goodsDataSet;
             // 
             // customerbindingNavigator
             // 
@@ -2190,6 +1998,161 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "id_resourse";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_manufacturer";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id_manufacturer";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "organization_name";
+            this.dataGridViewTextBoxColumn2.HeaderText = "organization_name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "e_mail";
+            this.dataGridViewTextBoxColumn3.HeaderText = "e_mail";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "phone_number";
+            this.dataGridViewTextBoxColumn4.HeaderText = "phone_number";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "address";
+            this.dataGridViewTextBoxColumn5.HeaderText = "address";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // manufacturerBindingSource
+            // 
+            this.manufacturerBindingSource.DataMember = "manufacturer";
+            this.manufacturerBindingSource.DataSource = this.production_of_goodsDataSet;
+            // 
+            // production_of_goodsDataSet
+            // 
+            this.production_of_goodsDataSet.DataSetName = "production_of_goodsDataSet";
+            this.production_of_goodsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "id_goods";
+            this.dataGridViewTextBoxColumn11.HeaderText = "id_goods";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "goods_name";
+            this.dataGridViewTextBoxColumn12.HeaderText = "goods_name";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "category";
+            this.dataGridViewTextBoxColumn13.HeaderText = "category";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // goodsBindingSource
+            // 
+            this.goodsBindingSource.DataMember = "goods";
+            this.goodsBindingSource.DataSource = this.production_of_goodsDataSet;
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "id_resourse";
+            this.dataGridViewTextBoxColumn25.HeaderText = "id_resourse";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "id_stock";
+            this.dataGridViewTextBoxColumn26.HeaderText = "id_stock";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "volume";
+            this.dataGridViewTextBoxColumn27.HeaderText = "volume";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            this.dataGridViewTextBoxColumn28.DataPropertyName = "price";
+            this.dataGridViewTextBoxColumn28.HeaderText = "price";
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.DataPropertyName = "resource_name";
+            this.dataGridViewTextBoxColumn29.HeaderText = "resource_name";
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            // 
+            // resourceBindingSource
+            // 
+            this.resourceBindingSource.DataMember = "resource";
+            this.resourceBindingSource.DataSource = this.production_of_goodsDataSet;
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            this.dataGridViewTextBoxColumn34.DataPropertyName = "id_stock";
+            this.dataGridViewTextBoxColumn34.HeaderText = "id_stock";
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            this.dataGridViewTextBoxColumn35.DataPropertyName = "adress";
+            this.dataGridViewTextBoxColumn35.HeaderText = "adress";
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
+            // 
+            // stockBindingSource
+            // 
+            this.stockBindingSource.DataMember = "stock";
+            this.stockBindingSource.DataSource = this.production_of_goodsDataSet;
+            // 
+            // orderBindingSource
+            // 
+            this.orderBindingSource.DataMember = "order";
+            this.orderBindingSource.DataSource = this.production_of_goodsDataSet;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "id_customer";
+            this.dataGridViewTextBoxColumn19.HeaderText = "id_customer";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "organization_name";
+            this.dataGridViewTextBoxColumn20.HeaderText = "organization_name";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "e_mail";
+            this.dataGridViewTextBoxColumn21.HeaderText = "e_mail";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "phone_number";
+            this.dataGridViewTextBoxColumn22.HeaderText = "phone_number";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "address";
+            this.dataGridViewTextBoxColumn23.HeaderText = "address";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "customer";
+            this.customerBindingSource.DataSource = this.production_of_goodsDataSet;
+            // 
             // manufacturerTableAdapter
             // 
             this.manufacturerTableAdapter.ClearBeforeFill = true;
@@ -2231,11 +2194,97 @@
             // 
             this.goods_manufacturerTableAdapter.ClearBeforeFill = true;
             // 
-            // sum
+            // orderDataGridView1
             // 
-            this.sum.DataPropertyName = "sum";
-            this.sum.HeaderText = "sum";
-            this.sum.Name = "sum";
+            this.orderDataGridView1.AutoGenerateColumns = false;
+            this.orderDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.orderDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idorderDataGridViewTextBoxColumn,
+            this.idcustomerDataGridViewTextBoxColumn,
+            this.idgoodsDataGridViewTextBoxColumn,
+            this.datatimeDataGridViewTextBoxColumn,
+            this.contactsDataGridViewTextBoxColumn,
+            this.sumDataGridViewTextBoxColumn});
+            this.orderDataGridView1.DataSource = this.orderBindingSource;
+            this.orderDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.orderDataGridView1.Location = new System.Drawing.Point(3, 41);
+            this.orderDataGridView1.Name = "orderDataGridView1";
+            this.orderDataGridView1.Size = new System.Drawing.Size(543, 276);
+            this.orderDataGridView1.TabIndex = 7;
+            // 
+            // idorderDataGridViewTextBoxColumn
+            // 
+            this.idorderDataGridViewTextBoxColumn.DataPropertyName = "id_order";
+            this.idorderDataGridViewTextBoxColumn.HeaderText = "id_order";
+            this.idorderDataGridViewTextBoxColumn.Name = "idorderDataGridViewTextBoxColumn";
+            // 
+            // idcustomerDataGridViewTextBoxColumn
+            // 
+            this.idcustomerDataGridViewTextBoxColumn.DataPropertyName = "id_customer";
+            this.idcustomerDataGridViewTextBoxColumn.HeaderText = "id_customer";
+            this.idcustomerDataGridViewTextBoxColumn.Name = "idcustomerDataGridViewTextBoxColumn";
+            // 
+            // idgoodsDataGridViewTextBoxColumn
+            // 
+            this.idgoodsDataGridViewTextBoxColumn.DataPropertyName = "id_goods";
+            this.idgoodsDataGridViewTextBoxColumn.HeaderText = "id_goods";
+            this.idgoodsDataGridViewTextBoxColumn.Name = "idgoodsDataGridViewTextBoxColumn";
+            // 
+            // datatimeDataGridViewTextBoxColumn
+            // 
+            this.datatimeDataGridViewTextBoxColumn.DataPropertyName = "data_time";
+            this.datatimeDataGridViewTextBoxColumn.HeaderText = "data_time";
+            this.datatimeDataGridViewTextBoxColumn.Name = "datatimeDataGridViewTextBoxColumn";
+            // 
+            // contactsDataGridViewTextBoxColumn
+            // 
+            this.contactsDataGridViewTextBoxColumn.DataPropertyName = "contacts";
+            this.contactsDataGridViewTextBoxColumn.HeaderText = "contacts";
+            this.contactsDataGridViewTextBoxColumn.Name = "contactsDataGridViewTextBoxColumn";
+            this.contactsDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sumDataGridViewTextBoxColumn
+            // 
+            this.sumDataGridViewTextBoxColumn.DataPropertyName = "sum";
+            this.sumDataGridViewTextBoxColumn.HeaderText = "sum";
+            this.sumDataGridViewTextBoxColumn.Name = "sumDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn30
+            // 
+            this.dataGridViewTextBoxColumn30.DataPropertyName = "id_order";
+            this.dataGridViewTextBoxColumn30.HeaderText = "id_order";
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            // 
+            // dataGridViewTextBoxColumn31
+            // 
+            this.dataGridViewTextBoxColumn31.DataPropertyName = "id_customer";
+            this.dataGridViewTextBoxColumn31.HeaderText = "id_customer";
+            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.DataPropertyName = "id_goods";
+            this.dataGridViewTextBoxColumn32.HeaderText = "id_goods";
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            // 
+            // dataGridViewTextBoxColumn33
+            // 
+            this.dataGridViewTextBoxColumn33.DataPropertyName = "data_time";
+            this.dataGridViewTextBoxColumn33.HeaderText = "data_time";
+            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            this.dataGridViewTextBoxColumn36.DataPropertyName = "contacts";
+            this.dataGridViewTextBoxColumn36.HeaderText = "contacts";
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            this.dataGridViewTextBoxColumn36.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            this.dataGridViewTextBoxColumn37.DataPropertyName = "sum";
+            this.dataGridViewTextBoxColumn37.HeaderText = "sum";
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
             // 
             // FormMain
             // 
@@ -2261,15 +2310,11 @@
             this.toolStripMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goods_manufacturerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.manufacturerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.production_of_goodsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resourceBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.goodsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsbindingNavigator)).EndInit();
             this.goodsbindingNavigator.ResumeLayout(false);
             this.goodsbindingNavigator.PerformLayout();
@@ -2285,7 +2330,6 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.resourceDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resourceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resourceNavigator)).EndInit();
             this.resourceNavigator.ResumeLayout(false);
             this.resourceNavigator.PerformLayout();
@@ -2299,8 +2343,6 @@
             this.tabPage5.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.orderDataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderNavigator)).EndInit();
             this.orderNavigator.ResumeLayout(false);
             this.orderNavigator.PerformLayout();
@@ -2308,7 +2350,6 @@
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerbindingNavigator)).EndInit();
             this.customerbindingNavigator.ResumeLayout(false);
             this.customerbindingNavigator.PerformLayout();
@@ -2316,6 +2357,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.orderDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockbindingNavigator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manufacturerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.production_of_goodsDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resourceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderDataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2498,7 +2547,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator25;
         private System.Windows.Forms.ToolStripButton toolStripButton61;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.DataGridView orderDataGridView1;
         private System.Windows.Forms.BindingNavigator orderNavigator;
         private System.Windows.Forms.ToolStripButton toolStripButton62;
         private System.Windows.Forms.ToolStripLabel toolStripLabel9;
@@ -2533,17 +2581,25 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator29;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBoxManufacturerFind;
         private System.Windows.Forms.ToolStripButton toolStripButtonManufacturerFind;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contacts;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
         private System.Windows.Forms.ToolStripMenuItem прочееToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sum;
+        private System.Windows.Forms.DataGridView orderDataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idorderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcustomerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idgoodsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datatimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contactsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
     }
 }
 
