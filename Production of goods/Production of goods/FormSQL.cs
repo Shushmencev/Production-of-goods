@@ -80,7 +80,7 @@ namespace Production_of_goods
         {
             if (String.IsNullOrEmpty(textBoxCustomer.Text))
             {
-                MessageBox.Show("Укажите имя заказчика", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Укажите имя ресурса", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -97,10 +97,11 @@ namespace Production_of_goods
             string sqlSelect = "";
             if (radioButtonDet_Cat.Checked)
             {
-                sqlSelect = @"SELECT g.volume, g.price, g.resource_name, s.adress
-                
+                sqlSelect = @"SELECT s.adress,
+                CAST (Sum(g.price) As decimal(16, 2)) AS Общая_стоимость
                 FROM production_of_goods.dbo.resource g, production_of_goods.dbo.stock s
-                WHERE g.resource_name LIKE @last_name
+                WHERE g.resource_name LIKE @last_name AND g.id_stock = s.id_stock
+                GROUP BY s.adress
                 ";
                 
             }
@@ -173,6 +174,16 @@ namespace Production_of_goods
                     MessageBoxButtons.OK, MessageBoxIcon.Information
                     );
             }
+        }
+
+        private void FormSQL_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButtonDet_Cat_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

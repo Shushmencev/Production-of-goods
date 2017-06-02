@@ -52,6 +52,7 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.production_of_goodsDataSet = new Production_of_goods.production_of_goodsDataSet();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControlSQL.SuspendLayout();
             this.tabPfge1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSelect)).BeginInit();
@@ -69,6 +70,7 @@
             // 
             this.tabControlSQL.Controls.Add(this.tabPfge1);
             this.tabControlSQL.Controls.Add(this.tabPageSelect);
+            this.tabControlSQL.Controls.Add(this.tabPage1);
             this.tabControlSQL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlSQL.Location = new System.Drawing.Point(0, 0);
             this.tabControlSQL.Name = "tabControlSQL";
@@ -227,10 +229,10 @@
             this.radioButtonDet_Name.AutoSize = true;
             this.radioButtonDet_Name.Location = new System.Drawing.Point(8, 43);
             this.radioButtonDet_Name.Name = "radioButtonDet_Name";
-            this.radioButtonDet_Name.Size = new System.Drawing.Size(192, 17);
+            this.radioButtonDet_Name.Size = new System.Drawing.Size(84, 17);
             this.radioButtonDet_Name.TabIndex = 1;
             this.radioButtonDet_Name.TabStop = true;
-            this.radioButtonDet_Name.Text = "Сумма заказов по имени товара";
+            this.radioButtonDet_Name.Text = "Ресурсы по";
             this.radioButtonDet_Name.UseVisualStyleBackColor = true;
             // 
             // radioButtonDet_Cat
@@ -238,11 +240,12 @@
             this.radioButtonDet_Cat.AutoSize = true;
             this.radioButtonDet_Cat.Location = new System.Drawing.Point(8, 20);
             this.radioButtonDet_Cat.Name = "radioButtonDet_Cat";
-            this.radioButtonDet_Cat.Size = new System.Drawing.Size(182, 17);
+            this.radioButtonDet_Cat.Size = new System.Drawing.Size(119, 17);
             this.radioButtonDet_Cat.TabIndex = 0;
             this.radioButtonDet_Cat.TabStop = true;
-            this.radioButtonDet_Cat.Text = "Сумма заказов по категориям";
+            this.radioButtonDet_Cat.Text = "Ресурсы по имени";
             this.radioButtonDet_Cat.UseVisualStyleBackColor = true;
+            this.radioButtonDet_Cat.CheckedChanged += new System.EventHandler(this.radioButtonDet_Cat_CheckedChanged);
             // 
             // groupBoxCustomerOrder
             // 
@@ -279,9 +282,9 @@
             this.labelCustomer.AutoSize = true;
             this.labelCustomer.Location = new System.Drawing.Point(6, 22);
             this.labelCustomer.Name = "labelCustomer";
-            this.labelCustomer.Size = new System.Drawing.Size(85, 13);
+            this.labelCustomer.Size = new System.Drawing.Size(73, 13);
             this.labelCustomer.TabIndex = 0;
-            this.labelCustomer.Text = "Имя заказчика";
+            this.labelCustomer.Text = "Имя ресурса";
             // 
             // bindingSource2
             // 
@@ -293,6 +296,16 @@
             this.production_of_goodsDataSet.DataSetName = "production_of_goodsDataSet";
             this.production_of_goodsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(605, 449);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Запросы изменения данных";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
             // FormSQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -301,6 +314,7 @@
             this.Controls.Add(this.tabControlSQL);
             this.Name = "FormSQL";
             this.Text = "FormSQL";
+            this.Load += new System.EventHandler(this.FormSQL_Load);
             this.tabControlSQL.ResumeLayout(false);
             this.tabPfge1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSelect)).EndInit();
@@ -344,5 +358,6 @@
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.BindingSource bindingSource2;
         private production_of_goodsDataSet production_of_goodsDataSet;
+        private System.Windows.Forms.TabPage tabPage1;
     }
 }
