@@ -97,17 +97,18 @@ namespace Production_of_goods
             string sqlSelect = "";
             if (radioButtonDet_Cat.Checked)
             {
-                sqlSelect = @"SELECT g.goods_name, category, c.organization_name, o.data_time,  
-                CAST (Sum(data_time) AS decimal(16, 2)) AS Сумма
-                FROM order o, customer c, goods g
-                WHERE g.goods_id = o.goods_id AND o.id_customer = c.id_customer
-                GROUP BY g.goods_name";
+                sqlSelect = @"SELECT g.volume, g.price, g.resource_name, s.adress
+                
+                FROM production_of_goods.dbo.resource g, production_of_goods.dbo.stock s
+                WHERE g.resource_name LIKE @last_name
+                ";
+                
             }
             else
             {
                 if (radioButtonDet_Name.Checked)
                 {
-                //    sqlSelect = @"SELECT g.goods_name, g.category, c.organization_name, o.data_time 
+                //    sqlSelect = @"SELECT g.goods_name, g.category, c.organization_name, o.data_time
                 //CAST (Sum(o.data_time) AS deciminal(16, 2)) AS Сумма
                 //FROM order o, customer c, goods g
                 //WHERE g.goods_id = o.goods_id AND o.id_customer = c.id_customer
@@ -145,7 +146,7 @@ namespace Production_of_goods
             {
                 try
                 {
-                    command.Parameters.Add("@amount", SqlDbType.Money).Value = Double.Parse(textBoxMore.Text);
+                    command.Parameters.Add("@amount", SqlDbType.Decimal).Value = Double.Parse(textBoxMore.Text);
                 }
 
                 catch
