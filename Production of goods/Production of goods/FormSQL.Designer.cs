@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.tabControlSQL = new System.Windows.Forms.TabControl();
+            this.tabPageDML = new System.Windows.Forms.TabControl();
             this.tabPfge1 = new System.Windows.Forms.TabPage();
             this.dataGridViewSelect = new System.Windows.Forms.DataGridView();
             this.groupBoxSelect = new System.Windows.Forms.GroupBox();
@@ -53,7 +53,25 @@
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.production_of_goodsDataSet = new Production_of_goods.production_of_goodsDataSet();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabControlSQL.SuspendLayout();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.radioButtonInsert = new System.Windows.Forms.RadioButton();
+            this.radioButtonUpdate = new System.Windows.Forms.RadioButton();
+            this.radioButtonDelete = new System.Windows.Forms.RadioButton();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxIdResource = new System.Windows.Forms.TextBox();
+            this.panel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxResourceName = new System.Windows.Forms.TextBox();
+            this.textBoxVolume = new System.Windows.Forms.TextBox();
+            this.textBoxPrice = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxIdStock = new System.Windows.Forms.TextBox();
+            this.tabPageDML.SuspendLayout();
             this.tabPfge1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSelect)).BeginInit();
             this.groupBoxSelect.SuspendLayout();
@@ -64,19 +82,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.production_of_goodsDataSet)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControlSQL
+            // tabPageDML
             // 
-            this.tabControlSQL.Controls.Add(this.tabPfge1);
-            this.tabControlSQL.Controls.Add(this.tabPageSelect);
-            this.tabControlSQL.Controls.Add(this.tabPage1);
-            this.tabControlSQL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlSQL.Location = new System.Drawing.Point(0, 0);
-            this.tabControlSQL.Name = "tabControlSQL";
-            this.tabControlSQL.SelectedIndex = 0;
-            this.tabControlSQL.Size = new System.Drawing.Size(613, 475);
-            this.tabControlSQL.TabIndex = 0;
+            this.tabPageDML.Controls.Add(this.tabPfge1);
+            this.tabPageDML.Controls.Add(this.tabPageSelect);
+            this.tabPageDML.Controls.Add(this.tabPage1);
+            this.tabPageDML.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabPageDML.Location = new System.Drawing.Point(0, 0);
+            this.tabPageDML.Name = "tabPageDML";
+            this.tabPageDML.SelectedIndex = 0;
+            this.tabPageDML.Size = new System.Drawing.Size(613, 475);
+            this.tabPageDML.TabIndex = 0;
             // 
             // tabPfge1
             // 
@@ -298,6 +320,9 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.panel);
+            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -306,16 +331,192 @@
             this.tabPage1.Text = "Запросы изменения данных";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBoxIdResource);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.radioButtonDelete);
+            this.groupBox1.Controls.Add(this.radioButtonUpdate);
+            this.groupBox1.Controls.Add(this.radioButtonInsert);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(599, 75);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Операторы";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 78);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(599, 368);
+            this.dataGridView1.TabIndex = 3;
+            // 
+            // radioButtonInsert
+            // 
+            this.radioButtonInsert.AutoSize = true;
+            this.radioButtonInsert.Location = new System.Drawing.Point(7, 20);
+            this.radioButtonInsert.Name = "radioButtonInsert";
+            this.radioButtonInsert.Size = new System.Drawing.Size(116, 17);
+            this.radioButtonInsert.TabIndex = 0;
+            this.radioButtonInsert.TabStop = true;
+            this.radioButtonInsert.Text = "Добавить данные";
+            this.radioButtonInsert.UseVisualStyleBackColor = true;
+            this.radioButtonInsert.CheckedChanged += new System.EventHandler(this.radioButtonInsert_CheckedChanged);
+            // 
+            // radioButtonUpdate
+            // 
+            this.radioButtonUpdate.AutoSize = true;
+            this.radioButtonUpdate.Location = new System.Drawing.Point(130, 20);
+            this.radioButtonUpdate.Name = "radioButtonUpdate";
+            this.radioButtonUpdate.Size = new System.Drawing.Size(117, 17);
+            this.radioButtonUpdate.TabIndex = 1;
+            this.radioButtonUpdate.TabStop = true;
+            this.radioButtonUpdate.Text = "Изменить данные";
+            this.radioButtonUpdate.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonDelete
+            // 
+            this.radioButtonDelete.AutoSize = true;
+            this.radioButtonDelete.Location = new System.Drawing.Point(254, 20);
+            this.radioButtonDelete.Name = "radioButtonDelete";
+            this.radioButtonDelete.Size = new System.Drawing.Size(109, 17);
+            this.radioButtonDelete.TabIndex = 2;
+            this.radioButtonDelete.TabStop = true;
+            this.radioButtonDelete.Text = "Удалить данные";
+            this.radioButtonDelete.UseVisualStyleBackColor = true;
+            this.radioButtonDelete.CheckedChanged += new System.EventHandler(this.radioButtonDelete_CheckedChanged);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(460, 46);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(136, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Выполнить запрос";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "id Ресурса";
+            // 
+            // textBoxIdResource
+            // 
+            this.textBoxIdResource.Location = new System.Drawing.Point(86, 43);
+            this.textBoxIdResource.Name = "textBoxIdResource";
+            this.textBoxIdResource.Size = new System.Drawing.Size(100, 20);
+            this.textBoxIdResource.TabIndex = 5;
+            // 
+            // panel
+            // 
+            this.panel.Controls.Add(this.textBoxIdStock);
+            this.panel.Controls.Add(this.label5);
+            this.panel.Controls.Add(this.button1);
+            this.panel.Controls.Add(this.textBoxPrice);
+            this.panel.Controls.Add(this.textBoxVolume);
+            this.panel.Controls.Add(this.textBoxResourceName);
+            this.panel.Controls.Add(this.label4);
+            this.panel.Controls.Add(this.label3);
+            this.panel.Controls.Add(this.label2);
+            this.panel.Location = new System.Drawing.Point(3, 78);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(599, 198);
+            this.panel.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "resourse_name";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 76);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Объём";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(7, 107);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Цена";
+            // 
+            // textBoxResourceName
+            // 
+            this.textBoxResourceName.Location = new System.Drawing.Point(86, 13);
+            this.textBoxResourceName.Name = "textBoxResourceName";
+            this.textBoxResourceName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxResourceName.TabIndex = 6;
+            // 
+            // textBoxVolume
+            // 
+            this.textBoxVolume.Location = new System.Drawing.Point(86, 72);
+            this.textBoxVolume.Name = "textBoxVolume";
+            this.textBoxVolume.Size = new System.Drawing.Size(100, 20);
+            this.textBoxVolume.TabIndex = 10;
+            // 
+            // textBoxPrice
+            // 
+            this.textBoxPrice.Location = new System.Drawing.Point(86, 100);
+            this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPrice.TabIndex = 11;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(458, 115);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(136, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Показать список";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 45);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "id_stock";
+            // 
+            // textBoxIdStock
+            // 
+            this.textBoxIdStock.Location = new System.Drawing.Point(86, 42);
+            this.textBoxIdStock.Name = "textBoxIdStock";
+            this.textBoxIdStock.Size = new System.Drawing.Size(100, 20);
+            this.textBoxIdStock.TabIndex = 13;
+            // 
             // FormSQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(613, 475);
-            this.Controls.Add(this.tabControlSQL);
+            this.Controls.Add(this.tabPageDML);
             this.Name = "FormSQL";
             this.Text = "FormSQL";
             this.Load += new System.EventHandler(this.FormSQL_Load);
-            this.tabControlSQL.ResumeLayout(false);
+            this.tabPageDML.ResumeLayout(false);
             this.tabPfge1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSelect)).EndInit();
             this.groupBoxSelect.ResumeLayout(false);
@@ -329,13 +530,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.production_of_goodsDataSet)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControlSQL;
+        private System.Windows.Forms.TabControl tabPageDML;
         private System.Windows.Forms.TabPage tabPfge1;
         private System.Windows.Forms.TabPage tabPageSelect;
         private System.Windows.Forms.GroupBox groupBoxSelect;
@@ -359,5 +566,23 @@
         private System.Windows.Forms.BindingSource bindingSource2;
         private production_of_goodsDataSet production_of_goodsDataSet;
         private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.RadioButton radioButtonDelete;
+        private System.Windows.Forms.RadioButton radioButtonUpdate;
+        private System.Windows.Forms.RadioButton radioButtonInsert;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxIdResource;
+        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxPrice;
+        private System.Windows.Forms.TextBox textBoxVolume;
+        private System.Windows.Forms.TextBox textBoxResourceName;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBoxIdStock;
+        private System.Windows.Forms.Label label5;
     }
 }

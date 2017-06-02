@@ -185,5 +185,270 @@ namespace Production_of_goods
         {
 
         }
+
+        private void radioButtonDelete_CheckedChanged(object sender, EventArgs e)
+        {
+            panel.Visible = !radioButtonDelete.Checked;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = FillDataGridView("SELECT * FROM production_of_goods.dbo.resource");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (radioButtonInsert.Checked)
+                Insert_1();
+            else
+            if (radioButtonUpdate.Checked)
+                Update_1();
+            else
+            if (radioButtonDelete.Checked)
+                Delete_1();
+            else
+                MessageBox.Show("Вы не выбрали действие", "Внимание",
+               MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+
+        void Insert_1()
+        {
+            if (
+                String.IsNullOrEmpty(textBoxIdResource.Text) ||
+                (String.IsNullOrEmpty(textBoxResourceName.Text) ||
+                (String.IsNullOrEmpty(textBoxVolume.Text) ||
+                (String.IsNullOrEmpty(textBoxPrice.Text))))
+                )
+            {
+                MessageBox.Show(
+                    "Обязательно введите код блюда, название, тип и цену блюда", "Внимание",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int id_resource = 0;
+            if (!int.TryParse(textBoxIdResource.Text, out id_resource))
+            {
+                MessageBox.Show("Некоректное значение кода блюда!", "Внимание",
+               MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int id_stock = 0;
+            if (!int.TryParse(textBoxIdStock.Text, out id_stock))
+            {
+                MessageBox.Show("Некоректное значение кода блюда!", "Внимание",
+               MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            double price = 0;
+            if (!double.TryParse(textBoxPrice.Text, out price))
+            {
+                MessageBox.Show("Некоректное значение цены!", "Внимание",
+               MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string sqlInsert = @"INSERT INTO production_of_goods.dbo.resource(id_resourse, id_stock, resource_name, volume,
+price)
+ VALUES (@id_resource, @id_stock, @Name, @Volume, @Price)";
+            SqlConnection connection = new SqlConnection(Properties.Settings.Default.production_of_goodsConnectionString);
+            connection.Open();
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = sqlInsert;
+            command.Parameters.AddWithValue("@id_resource", textBoxIdResource.Text);
+            command.Parameters.AddWithValue("@id_stock", textBoxIdStock.Text);
+            command.Parameters.AddWithValue("@Name", textBoxResourceName.Text);
+            command.Parameters.AddWithValue("@Volume", textBoxVolume.Text);
+            //или другим способом, если необходимо явное указание типа данных
+            //command.Parameters.Add("@Volume", SqlDbType.NVarChar).Value = textBoxVolume.Text;
+            command.Parameters.AddWithValue("@Price", price);
+            //command.Parameters.AddWithValue("@Weight", weight);
+            //if (!String.IsNullOrEmpty(listBoxEd_dish.Text))
+            //    command.Parameters.AddWithValue("@Ed", listBoxEd_dish.Text);
+            //else
+            //    command.Parameters.AddWithValue("@Ed", DBNull.Value);
+            //command.Parameters.AddWithValue("@Firm", checkBoxFirm.Checked);
+            //if (!String.IsNullOrEmpty(fileImage))
+            //    command.Parameters.AddWithValue("@Photo",
+            //   File.ReadAllBytes(fileImage));
+            //else
+            //{
+            //    command.Parameters.Add("@Photo", SqlDbType.VarBinary);
+            //    command.Parameters["@Photo"].Value = DBNull.Value;
+            //}
+            //command.Parameters.AddWithValue("@Sostav", textBoxIng_dish.Text);
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Ошибка выполнения запроса.\n" + err.Message,
+               "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            connection.Close();
+            button1_Click(this, EventArgs.Empty);
+        }
+
+
+
+        void Delete_1()
+        {
+            if (String.IsNullOrEmpty(textBoxIdResource.Text))
+            {
+                MessageBox.Show("Обязательно укажите код блюда данные которого необходимо удалить", "Внимание",
+                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return;
+            }
+
+            int id_resource = 0;
+            if (!int.TryParse(textBoxIdResource.Text, out id_resource))
+            {
+                MessageBox.Show("Некоректное значение кода блюда!", "Внимание",
+               MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string sqlDelete = @"DELETE FROM production_of_goods.dbo.resource WHERE id_resourse = @id_resource";
+            SqlConnection connection = new SqlConnection(Properties.Settings.Default.production_of_goodsConnectionString);
+            connection.Open();
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = sqlDelete;
+            command.Parameters.AddWithValue("@id_resource", id_resource);
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Ошибка удаления");
+            }
+            connection.Close();
+            button1_Click(this, EventArgs.Empty);
+        }
+
+        private void radioButtonInsert_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        void Update_1()
+        {
+            if (String.IsNullOrEmpty(textBoxIdResource.Text))
+            {
+                MessageBox.Show("Обязательно укажите код блюда, для которого будете менять данные", "Внимание",
+                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            int id_resource;
+            if (!int.TryParse(textBoxIdResource.Text, out id_resource))
+            {
+                MessageBox.Show("Некоректное значение кода блюда!", "Внимание",
+               MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            double price = 0;
+            if ((!String.IsNullOrEmpty(textBoxPrice.Text)) &&
+           (!double.TryParse(textBoxPrice.Text, out price)))
+            {
+                MessageBox.Show("Некоректное значение цены!", "Внимание",
+               MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+           // double weight = 0;
+           // if ((!String.IsNullOrEmpty(textBoxWeight_dish.Text)) &&
+           //(!double.TryParse(textBoxWeight_dish.Text, out weight)))
+           // {
+           //     MessageBox.Show("Некоректное значение веса!", "Внимание",
+           //    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+           //     return;
+           // }
+
+            string sqlUpdate = "UPDATE production_of_goods.dbo.resource SET {0} WHERE id_resourse = @id_resource";
+ SqlConnection connection = new
+SqlConnection(Properties.Settings.Default.production_of_goodsConnectionString);
+            connection.Open();
+
+            SqlCommand command = connection.CreateCommand();
+            string sqlValues = "";
+            command.Parameters.AddWithValue("@id_stock", textBoxIdStock.Text);
+
+            if (!String.IsNullOrEmpty(textBoxIdResource.Text))
+                sqlValues += "id_resourse=@id_resource,";
+
+            if (!String.IsNullOrEmpty(textBoxIdStock.Text))
+                sqlValues += "id_stock=@id_stock,";
+
+            if (!String.IsNullOrEmpty(textBoxResourceName.Text))
+                sqlValues += "resource_name=@Name,";
+
+            if (!String.IsNullOrEmpty(textBoxVolume.Text))
+                sqlValues += "volume=@Volume,";
+
+            if (!String.IsNullOrEmpty(textBoxPrice.Text))
+                sqlValues += "price=@Price,";
+
+            sqlValues = sqlValues.Substring(0, sqlValues.Length - 1);
+            command.CommandText = String.Format(sqlUpdate, sqlValues);
+
+            if (!String.IsNullOrEmpty(textBoxResourceName.Text))
+                command.Parameters.AddWithValue("@Name", textBoxResourceName.Text);
+
+            if (!String.IsNullOrEmpty(textBoxIdResource.Text))
+                command.Parameters.AddWithValue("@id_resource", textBoxIdResource.Text);
+
+            if (!String.IsNullOrEmpty(textBoxVolume.Text))
+                command.Parameters.AddWithValue("@Volume", textBoxVolume.Text);
+
+            if (!String.IsNullOrEmpty(textBoxPrice.Text))
+                command.Parameters.AddWithValue("@Price", textBoxPrice.Text);
+
+
+
+
+            //или другим способом, если необходимо явное указание типа данных
+            //if (!String.IsNullOrEmpty(textBoxType_dish.Text))
+            //    command.Parameters.Add("@Type", SqlDbType.NVarChar).Value =
+            //   textBoxType_dish.Text;
+            //if (!String.IsNullOrEmpty(textBoxPrice_dish.Text))
+            //    command.Parameters.AddWithValue("@Price", price);
+
+            //if (!String.IsNullOrEmpty(textBoxWeight_dish.Text))
+            //    command.Parameters.AddWithValue("@Weight", weight);
+            //if (!String.IsNullOrEmpty(listBoxEd_dish.Text))
+            //    command.Parameters.AddWithValue("@Ed", listBoxEd_dish.Text);
+            //if (!String.IsNullOrEmpty(fileImage))
+            //    command.Parameters.AddWithValue("@Photo",
+            //   File.ReadAllBytes(fileImage));
+            //if (!String.IsNullOrEmpty(textBoxIng_dish.Text))
+            //    command.Parameters.AddWithValue("@Sostav",
+            //   textBoxIng_dish.Text);
+
+            //command.Parameters.AddWithValue("@Firm", checkBoxFirm.Checked);
+            //command.Parameters.AddWithValue("@id_resource", id_resource);
+            
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Ошибка выполнения запроса:\n" + err.Message,
+               "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            connection.Close();
+            button1_Click(this, EventArgs.Empty);
+        }
+
+
+
+
     }
 }
